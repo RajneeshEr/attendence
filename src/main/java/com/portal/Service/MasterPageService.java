@@ -5,6 +5,11 @@ import com.portal.Repository.MasterPageRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+/**
+ * @author rajneesh yadav
+ * email er.rajyd@gmamil.com
+ * date 23/5/2018
+ */
 @Service
 public class MasterPageService {
 

@@ -1,7 +1,11 @@
 package com.portal.Entity;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.Getter;
 import lombok.Setter;
+import org.springframework.http.converter.json.GsonBuilderUtils;
+
 import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
@@ -11,6 +15,7 @@ import javax.persistence.*;
 
 /**
  * @author rajneesh yadav
+ * email er.rajyd@gmamil.com
  * date 21/5/2018
  */
 @Entity
@@ -50,6 +55,7 @@ public class MasterPage implements Serializable {
     private String buddyEmail;
 
     public MasterPage() {
+
     }
 
 }

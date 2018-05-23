@@ -3,9 +3,16 @@ package com.portal.Service;
 import com.portal.Entity.Designation;
 import com.portal.Repository.DesignationRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+/**
+ * @author rajneesh yadav
+ * email er.rajyd@gmamil.com
+ * date 23/5/2018
+ */
+@Service
 public class DesignationService {
 
     @Autowired
@@ -24,15 +31,6 @@ public class DesignationService {
     public Designation saveDesignation(Designation designation){
         try{
             return designationRepository.save(designation);
-        }catch (Exception e ){
-            e.printStackTrace();
-            return null;
-        }
-    }
-
-    public List<Designation> getDesignationByType(String type){
-        try{
-            return designationRepository.findByType(type);
         }catch (Exception e ){
             e.printStackTrace();
             return null;

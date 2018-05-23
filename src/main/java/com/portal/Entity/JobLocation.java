@@ -9,6 +9,7 @@ import javax.persistence.*;
 
 /**
  * @author rajneesh yadav
+ * email er.rajyd@gmamil.com
  * date 21/5/2018
  */
 @Entity

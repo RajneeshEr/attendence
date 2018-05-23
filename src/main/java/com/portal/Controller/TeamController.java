@@ -6,6 +6,11 @@ import com.portal.Service.TeamService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+/**
+ * @author rajneesh yadav
+ * email er.rajyd@gmamil.com
+ * date 23/5/2018
+ */
 @RestController
 @RequestMapping("/hire")
 public class TeamController implements CommonConstant {

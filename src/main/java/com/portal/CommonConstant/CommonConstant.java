@@ -7,6 +7,10 @@ package com.portal.CommonConstant;
  */
 public interface CommonConstant {
     String SAVE="Data save successfully";
-    String FAIL="Data couldn't save successfully";
+    String NOT_SAVE="Data couldn't save successfully";
+    String DELETE="Data delete successfully";
+    String NOT_DELETE="Data couldn't deleted successfully";
+    String UPDATE="Data update successfully";
+    String NOT_UPDATE="Data couldn't update successfully";
 
 }

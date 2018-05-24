@@ -1,37 +1,26 @@
 package com.portal.Service;
 
 import com.portal.CommonConstant.CommonConstant;
-import com.portal.Entity.Team;
-import com.portal.Repository.TeamRepository;
+import com.portal.Entity.Employee;
+import com.portal.Repository.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import java.util.List;
-
 /**
  * @author rajneesh yadav
  * email er.rajyd@gmamil.com
  * date 23/5/2018
  */
 @Service
-public class TeamService implements CommonConstant{
+public class EmployeeService implements CommonConstant {
 
     @Autowired
-    private TeamRepository teamRepository;
+    private EmployeeRepository employeeRepository;
 
-    public Team save(Team team){
-        try{
-            return teamRepository.save(team);
-        }catch (Exception e){
-            e.printStackTrace();
-            return null;
-        }
-    }
-
-    public List<Team> findListOfTeamByName(String name){
-        try{
-            return teamRepository.findByName(name);
-        }catch (Exception e){
+    //this method will work for save or update object
+    public Employee save(Employee object){
+        try {
+            return employeeRepository.save(object);
+        } catch (Exception e) {
             e.printStackTrace();
             return null;
         }
@@ -39,25 +28,25 @@ public class TeamService implements CommonConstant{
 
     public boolean findByIdGiven(long id){
         try {
-            return teamRepository.existsById(id);
+            return employeeRepository.existsById(id);
         } catch (Exception e) {
             e.printStackTrace();
             return false;
         }
     }
 
-    public Team findById(long id){
+    public Employee findById(long id){
          try {
-             return teamRepository.findById(id);
+             return employeeRepository.findById(id);
          } catch (Exception e) {
              e.printStackTrace();
              return null;
          }
     }
 
-    public String delete(Team object){
+    public String delete(Employee object){
         try {
-            teamRepository.delete(object);
+            employeeRepository.delete(object);
             return DELETE;
         } catch (Exception e) {
             e.printStackTrace();
@@ -65,6 +54,4 @@ public class TeamService implements CommonConstant{
         }
     }
 
-
 }
-

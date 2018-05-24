@@ -1,4 +1,4 @@
-package com.portal.Repository.HrMasterSetUpRepository;
+package com.portal.Repository.HrMasterRepositories;
 
 import com.portal.Entity.HrMasterSetUp.QualificationType;
 import org.springframework.data.repository.CrudRepository;
@@ -11,5 +11,5 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
  */
 @RepositoryRestResource
 public interface QualificationTypeRepository extends CrudRepository<QualificationType, Long> {
-
+    QualificationType findById(long id);
 }

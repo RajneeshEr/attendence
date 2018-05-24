@@ -13,6 +13,8 @@ import java.util.List;
 @RepositoryRestResource
 public interface TeamRepository extends CrudRepository<Team, Long> {
     List<Team> findByName(String name);
+    Team findById(long id);
+
 }
 
 

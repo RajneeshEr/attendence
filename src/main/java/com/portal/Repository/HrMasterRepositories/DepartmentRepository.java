@@ -1,6 +1,7 @@
-package com.portal.Repository.HrMasterSetUpRepository;
+package com.portal.Repository.HrMasterRepositories;
 
 import com.portal.Entity.HrMasterSetUp.Department;
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
@@ -11,5 +12,7 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
  */
 @RepositoryRestResource
 public interface DepartmentRepository extends CrudRepository<Department, Long> {
+    Department findByCode(String code);
+    Department findById(long id);
 
 }

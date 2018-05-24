@@ -22,6 +22,7 @@ public class Grade implements Serializable {
 
     @Column(unique = true)
     private String code;
+    @Column(unique = true)
     private String name;
 
     public Grade() {

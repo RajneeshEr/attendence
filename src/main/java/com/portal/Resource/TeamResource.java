@@ -1,4 +1,4 @@
-package com.portal.Controller;
+package com.portal.Resource;
 
 import com.portal.CommonConstant.CommonConstant;
 import com.portal.Entity.Team;
@@ -12,25 +12,24 @@ import org.springframework.web.bind.annotation.*;
  * date 23/5/2018
  */
 @RestController
-@RequestMapping("/hire")
-public class TeamController implements CommonConstant {
+@RequestMapping("/rest/team")
+public class TeamResource implements CommonConstant {
 
     @Autowired
     private TeamService teamService;
 
     @PostMapping("/saveTeam")
     public String save(@RequestBody Team team){
-        if (teamService.saveTeam(team) !=null){
+        if (teamService.save(team) !=null){
             return SAVE;
         }else{
-            return FAIL;
+            return NOT_SAVE;
         }
     }
 
     @GetMapping(value = "/getTeamById/{id}", produces = "application/json")
     public Team getTeamByid(@PathVariable("id") long id){
-        return teamService.getTeamByID(id);
+        return teamService.findById(id);
     }
-
 
 }

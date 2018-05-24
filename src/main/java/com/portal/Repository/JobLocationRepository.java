@@ -13,5 +13,6 @@ import java.util.List;
 @RepositoryRestResource
 public interface JobLocationRepository extends CrudRepository<JobLocation, Long> {
     List<JobLocation> findByJobLocationName(String jobloctaionName);
+    JobLocation findById(long id);
 
 }

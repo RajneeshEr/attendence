@@ -1,7 +1,8 @@
-package com.portal.Repository.HrMasterSetUpRepository;
+package com.portal.Repository;
 
-import com.portal.Entity.HrMasterSetUp.Qualification;
+import com.portal.Entity.Employee;
 import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.repository.query.Param;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
 /**
@@ -10,6 +11,7 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
  * date 23/5/2018
  */
 @RepositoryRestResource
-public interface QualificationRepository extends CrudRepository<Qualification, Long> {
+public interface EmployeeRepository extends CrudRepository<Employee, Long> {
+    Employee findById(long id);
 
 }

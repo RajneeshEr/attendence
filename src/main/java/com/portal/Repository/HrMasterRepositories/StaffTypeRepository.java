@@ -1,4 +1,4 @@
-package com.portal.Repository.HrMasterSetUpRepository;
+package com.portal.Repository.HrMasterRepositories;
 
 import com.portal.Entity.HrMasterSetUp.StaffType;
 import org.springframework.data.repository.CrudRepository;
@@ -11,5 +11,6 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
  */
 @RepositoryRestResource
 public interface StaffTypeRepository extends CrudRepository<StaffType, Long> {
+    StaffType findById(long id);
 
 }

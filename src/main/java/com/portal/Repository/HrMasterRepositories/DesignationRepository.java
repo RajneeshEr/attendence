@@ -1,4 +1,4 @@
-package com.portal.Repository.HrMasterSetUpRepository;
+package com.portal.Repository.HrMasterRepositories;
 
 import com.portal.Entity.HrMasterSetUp.Designation;
 import org.springframework.data.repository.CrudRepository;
@@ -12,6 +12,8 @@ import java.util.List;
  */
 @RepositoryRestResource
 public interface DesignationRepository extends CrudRepository<Designation, Long> {
-    List<Designation> findByName(String name);
+    Designation findByCode(String code);
+    Designation findByName(String name);
+    Designation findById(long id);
 
 }

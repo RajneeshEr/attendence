@@ -1,27 +1,25 @@
-package com.portal.Service;
+package com.portal.Service.HrMasterServices;
 
 import com.portal.CommonConstant.CommonConstant;
-import com.portal.Entity.JobLocation;
-import com.portal.Entity.MasterPage;
-import com.portal.Repository.MasterPageRepository;
+import com.portal.Entity.HrMasterSetUp.StaffType;
+import com.portal.Repository.HrMasterRepositories.StaffTypeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 /**
  * @author rajneesh yadav
  * email er.rajyd@gmamil.com
- * date 23/5/2018
+ * date 24/5/2018
  */
 @Service
-public class MasterPageService implements CommonConstant {
+public class StaffTypeService implements CommonConstant {
 
     @Autowired
-    private MasterPageRepository masterPageRepository;
+    private StaffTypeRepository staffTypeRepository;
 
     //this method will work for save or update object
-    public MasterPage save(MasterPage masterPage){
+    public StaffType save(StaffType staffType){
         try {
-            return masterPageRepository.save(masterPage);
+            return staffTypeRepository.save(staffType);
         } catch (Exception e) {
             e.printStackTrace();
             return null;
@@ -30,31 +28,30 @@ public class MasterPageService implements CommonConstant {
 
     public boolean findByIdGiven(long id){
         try {
-            return masterPageRepository.existsById(id);
+            return staffTypeRepository.existsById(id);
         } catch (Exception e) {
             e.printStackTrace();
             return false;
         }
     }
 
-    public MasterPage findById(long id){
+    public StaffType findById(long id){
          try {
-             return masterPageRepository.findById(id);
+             return staffTypeRepository.findById(id);
          } catch (Exception e) {
              e.printStackTrace();
              return null;
          }
     }
 
-    public String delete(MasterPage object){
+    public String delete(StaffType object){
         try {
-            masterPageRepository.delete(object);
+            staffTypeRepository.delete(object);
             return DELETE;
         } catch (Exception e) {
             e.printStackTrace();
             return NOT_DELETE;
         }
     }
-
 
 }

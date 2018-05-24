@@ -1,27 +1,25 @@
-package com.portal.Service;
+package com.portal.Service.HrMasterServices;
 
 import com.portal.CommonConstant.CommonConstant;
-import com.portal.Entity.JobLocation;
-import com.portal.Entity.MasterPage;
-import com.portal.Repository.MasterPageRepository;
+import com.portal.Entity.HrMasterSetUp.QualificationType;
+import com.portal.Repository.HrMasterRepositories.QualificationTypeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 /**
  * @author rajneesh yadav
  * email er.rajyd@gmamil.com
- * date 23/5/2018
+ * date 24/5/2018
  */
 @Service
-public class MasterPageService implements CommonConstant {
+public class QualificationTypeService implements CommonConstant{
 
     @Autowired
-    private MasterPageRepository masterPageRepository;
+    private QualificationTypeRepository qualificationTypeRepository;
 
     //this method will work for save or update object
-    public MasterPage save(MasterPage masterPage){
+    public QualificationType save(QualificationType qualificationType){
         try {
-            return masterPageRepository.save(masterPage);
+            return qualificationTypeRepository.save(qualificationType);
         } catch (Exception e) {
             e.printStackTrace();
             return null;
@@ -30,25 +28,25 @@ public class MasterPageService implements CommonConstant {
 
     public boolean findByIdGiven(long id){
         try {
-            return masterPageRepository.existsById(id);
+            return qualificationTypeRepository.existsById(id);
         } catch (Exception e) {
             e.printStackTrace();
             return false;
         }
     }
 
-    public MasterPage findById(long id){
+    public QualificationType findById(long id){
          try {
-             return masterPageRepository.findById(id);
+             return qualificationTypeRepository.findById(id);
          } catch (Exception e) {
              e.printStackTrace();
              return null;
          }
     }
 
-    public String delete(MasterPage object){
+    public String delete(QualificationType object){
         try {
-            masterPageRepository.delete(object);
+            qualificationTypeRepository.delete(object);
             return DELETE;
         } catch (Exception e) {
             e.printStackTrace();

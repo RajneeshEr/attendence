@@ -1,7 +1,7 @@
-package com.portal.Service;
+package com.portal.Service.HrMasterSetUpService;
 
-import com.portal.Entity.Grade;
-import com.portal.Repository.GradeRepository;
+import com.portal.Entity.HrMasterSetUp.Grade;
+import com.portal.Repository.HrMasterSetUpRepository.GradeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

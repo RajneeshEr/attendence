@@ -1,14 +1,13 @@
 package com.portal.Entity;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import com.portal.Entity.HrMasterSetUp.Designation;
+import com.portal.Entity.HrMasterSetUp.Employment;
+import com.portal.Entity.HrMasterSetUp.Grade;
 import lombok.Getter;
 import lombok.Setter;
-import org.springframework.http.converter.json.GsonBuilderUtils;
 
 import java.io.Serializable;
 import java.util.Date;
-import java.util.List;
 import java.util.Set;
 
 import javax.persistence.*;

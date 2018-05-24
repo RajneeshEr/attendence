@@ -1,30 +1,30 @@
-package com.portal.Entity;
+package com.portal.Entity.HrMasterSetUp;
 
 import lombok.Getter;
 import lombok.Setter;
 
 import java.io.Serializable;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 /**
  * @author rajneesh yadav
  * email er.rajyd@gmamil.com
- * date 21/5/2018
+ * date 24/5/2018
  */
 @Entity
 @Getter
 @Setter
-public class Designation implements Serializable {
+public class StaffType implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     long id;
+
+    @Column(unique = true)
+    private String code;
     private String name;
 
-    public Designation() {
+    public StaffType() {
     }
 
 }

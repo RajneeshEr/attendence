@@ -1,7 +1,7 @@
-package com.portal.Service;
+package com.portal.Service.HrMasterSetUpService;
 
-import com.portal.Entity.Designation;
-import com.portal.Repository.DesignationRepository;
+import com.portal.Entity.HrMasterSetUp.Designation;
+import com.portal.Repository.HrMasterSetUpRepository.DesignationRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

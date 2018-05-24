@@ -1,14 +1,11 @@
-package com.portal.Entity;
+package com.portal.Entity.HrMasterSetUp;
 
 import lombok.Getter;
 import lombok.Setter;
 
 import java.io.Serializable;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 /**
  * @author rajneesh yadav
@@ -23,7 +20,8 @@ public class Employment implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     long id;
 
-    private String name;
+    @Column(unique = true)
+    private String code;
     private String type;
 
     public Employment() {

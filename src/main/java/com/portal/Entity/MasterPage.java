@@ -1,8 +1,8 @@
 package com.portal.Entity;
 
-import com.portal.Entity.HrMasterSetUp.Designation;
-import com.portal.Entity.HrMasterSetUp.Employment;
-import com.portal.Entity.HrMasterSetUp.Grade;
+import com.portal.Entity.HrMasters.Designation;
+import com.portal.Entity.HrMasters.Employment;
+import com.portal.Entity.HrMasters.Grade;
 import lombok.Getter;
 import lombok.Setter;
 

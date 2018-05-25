@@ -1,4 +1,4 @@
-package com.portal.Entity.HrMasterSetUp;
+package com.portal.Entity.HrMasters;
 
 import lombok.Getter;
 import lombok.Setter;

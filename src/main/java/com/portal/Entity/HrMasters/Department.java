@@ -1,4 +1,4 @@
-package com.portal.Entity.HrMasterSetUp;
+package com.portal.Entity.HrMasters;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -10,21 +10,21 @@ import javax.persistence.*;
 /**
  * @author rajneesh yadav
  * email er.rajyd@gmamil.com
- * date 21/5/2018
+ * date 24/5/2018
  */
 @Entity
 @Getter
 @Setter
-public class Designation implements Serializable {
+public class Department implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     long id;
+
     @Column(unique = true)
-    private String code;
+    String code;
+    String type;
 
-    private String name;
-
-    public Designation() {
+    public Department() {
     }
 
 }

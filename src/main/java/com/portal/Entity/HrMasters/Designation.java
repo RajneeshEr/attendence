@@ -1,4 +1,4 @@
-package com.portal.Entity.HrMasterSetUp;
+package com.portal.Entity.HrMasters;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -15,16 +15,16 @@ import javax.persistence.*;
 @Entity
 @Getter
 @Setter
-public class Employment implements Serializable {
+public class Designation implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     long id;
-
     @Column(unique = true)
     private String code;
-    private String type;
 
-    public Employment() {
+    private String name;
+
+    public Designation() {
     }
 
 }

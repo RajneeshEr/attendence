@@ -1,11 +1,11 @@
 package com.portal.Service;
 
 import com.portal.CommonConstant.CommonConstant;
-import com.portal.Entity.Employee;
+import com.portal.Entity.Core.Employee;
 import com.portal.Repository.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Service;
+
 /**
  * @author rajneesh yadav
  * email er.rajyd@gmamil.com

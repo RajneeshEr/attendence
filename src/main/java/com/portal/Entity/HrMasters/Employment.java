@@ -1,6 +1,6 @@
 package com.portal.Entity.HrMasters;
 
-import com.portal.Entity.Employee;
+import com.portal.Entity.Core.Employee;
 import lombok.Data;
 
 import java.io.Serializable;

@@ -1,7 +1,7 @@
 package com.portal.Service;
 
 import com.portal.CommonConstant.CommonConstant;
-import com.portal.Entity.ReferalBuddy;
+import com.portal.Entity.Core.ReferalBuddy;
 import com.portal.Repository.ReferalBuddyRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

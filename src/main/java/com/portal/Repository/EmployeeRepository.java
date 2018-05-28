@@ -1,8 +1,7 @@
 package com.portal.Repository;
 
-import com.portal.Entity.Employee;
+import com.portal.Entity.Core.Employee;
 import org.springframework.data.repository.CrudRepository;
-import org.springframework.data.repository.query.Param;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
 /**

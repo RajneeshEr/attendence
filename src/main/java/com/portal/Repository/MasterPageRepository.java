@@ -1,6 +1,6 @@
 package com.portal.Repository;
 
-import com.portal.Entity.MasterPage;
+import com.portal.Entity.Core.MasterPage;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 /**

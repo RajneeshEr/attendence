@@ -1,50 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b6d10a30-253a-4eb6-9a25-e10474f3506e" name="Default" comment="Remove extra dependency">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/portal/Entity/Employee.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/portal/Entity/HrMasterSetUp/Department.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/portal/Entity/HrMasterSetUp/Qualification.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/portal/Entity/HrMasterSetUp/QualificationType.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/portal/Entity/HrMasterSetUp/StaffType.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/portal/Entity/ReferalBuddy.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/portal/Repository/HrMasterSetUpRepository/DepartmentRepository.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/portal/Repository/HrMasterSetUpRepository/QualificationRepository.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/portal/Repository/HrMasterSetUpRepository/QualificationTypeRepository.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/portal/Repository/HrMasterSetUpRepository/StaffTypeRepository.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/portal/Service/HrMasterSetUpService/DepartmentService.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/portal/Service/HrMasterSetUpService/QualificationService.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/portal/Service/HrMasterSetUpService/QualificationTypeService.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/portal/Service/HrMasterSetUpService/StaffTypeService.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/portal/Controller/MasterPageController.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/portal/Controller/TeamController.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/portal/Service/JobLocationService.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/portal/Service/MasterPageService.class" />
+    <list default="true" id="b6d10a30-253a-4eb6-9a25-e10474f3506e" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_beanutils_commons_beanutils_1_9_1.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_collections_commons_collections_3_2_1.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_sf_dozer_dozer_5_5_1.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_7.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jcl_over_slf4j_1_7_25.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/portal/Entity/CoreModel/EmployeeModel.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/portal/Entity/CoreModel/MasterPageModel.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/portal/Resource/ResourceCore/MasterPageResource.java" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/HiringPortal.iml" afterPath="$PROJECT_DIR$/HiringPortal.iml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/portal/Controller/DesignationController.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/portal/Entity/Designation.java" afterPath="$PROJECT_DIR$/src/main/java/com/portal/Entity/HrMasterSetUp/Designation.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/portal/Entity/Employment.java" afterPath="$PROJECT_DIR$/src/main/java/com/portal/Entity/HrMasterSetUp/Employment.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/portal/Entity/Grade.java" afterPath="$PROJECT_DIR$/src/main/java/com/portal/Entity/HrMasterSetUp/Grade.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/portal/Entity/MasterPage.java" afterPath="$PROJECT_DIR$/src/main/java/com/portal/Entity/MasterPage.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/portal/Repository/DesignationRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/portal/Repository/HrMasterSetUpRepository/DesignationRepository.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/portal/Repository/EmploymentRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/portal/Repository/HrMasterSetUpRepository/EmploymentRepository.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/portal/Repository/GradeRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/portal/Repository/HrMasterSetUpRepository/GradeRepository.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/portal/Service/DesignationService.java" afterPath="$PROJECT_DIR$/src/main/java/com/portal/Service/HrMasterSetUpService/DesignationService.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/portal/Service/EmploymentService.java" afterPath="$PROJECT_DIR$/src/main/java/com/portal/Service/HrMasterSetUpService/EmploymentService.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/portal/Service/GradeService.java" afterPath="$PROJECT_DIR$/src/main/java/com/portal/Service/HrMasterSetUpService/GradeService.java" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" afterPath="$PROJECT_DIR$/target/classes/application.properties" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/portal/Entity/Designation.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/portal/Entity/Employment.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/portal/Entity/Grade.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/portal/Entity/JobLocation.class" afterPath="$PROJECT_DIR$/target/classes/com/portal/Entity/JobLocation.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/portal/Entity/MasterPage.class" afterPath="$PROJECT_DIR$/target/classes/com/portal/Entity/MasterPage.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/portal/Entity/Team.class" afterPath="$PROJECT_DIR$/target/classes/com/portal/Entity/Team.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/portal/HiringPortal.class" afterPath="$PROJECT_DIR$/target/classes/com/portal/HiringPortal.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/portal/Repository/DesignationRepository.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/portal/Repository/EmploymentRepository.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/portal/Repository/GradeRepository.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/portal/Service/TeamService.class" afterPath="$PROJECT_DIR$/target/classes/com/portal/Service/TeamService.class" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/portal/Entity/Employee.java" afterPath="$PROJECT_DIR$/src/main/java/com/portal/Entity/Core/Employee.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/portal/Entity/HrMasters/Department.java" afterPath="$PROJECT_DIR$/src/main/java/com/portal/Entity/HrMasters/Department.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/portal/Entity/HrMasters/Designation.java" afterPath="$PROJECT_DIR$/src/main/java/com/portal/Entity/HrMasters/Designation.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/portal/Entity/HrMasters/Employment.java" afterPath="$PROJECT_DIR$/src/main/java/com/portal/Entity/HrMasters/Employment.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/portal/Entity/HrMasters/Grade.java" afterPath="$PROJECT_DIR$/src/main/java/com/portal/Entity/HrMasters/Grade.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/portal/Entity/HrMasters/StaffType.java" afterPath="$PROJECT_DIR$/src/main/java/com/portal/Entity/HrMasters/StaffType.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/portal/Entity/JobLocation.java" afterPath="$PROJECT_DIR$/src/main/java/com/portal/Entity/Core/JobLocation.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/portal/Entity/MasterPage.java" afterPath="$PROJECT_DIR$/src/main/java/com/portal/Entity/Core/MasterPage.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/portal/Entity/ReferalBuddy.java" afterPath="$PROJECT_DIR$/src/main/java/com/portal/Entity/Core/ReferalBuddy.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/portal/Entity/Team.java" afterPath="$PROJECT_DIR$/src/main/java/com/portal/Entity/Core/Team.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/portal/Repository/EmployeeRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/portal/Repository/EmployeeRepository.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/portal/Repository/JobLocationRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/portal/Repository/JobLocationRepository.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/portal/Repository/MasterPageRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/portal/Repository/MasterPageRepository.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/portal/Repository/ReferalBuddyRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/portal/Repository/ReferalBuddyRepository.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/portal/Repository/TeamRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/portal/Repository/TeamRepository.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/portal/Resource/HrMasterResource/DesignationResource.java" afterPath="$PROJECT_DIR$/src/main/java/com/portal/Resource/HrMasterResource/DesignationResource.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/portal/Resource/MasterPageResource.java" afterPath="$PROJECT_DIR$/src/main/java/com/portal/Resource/ResourceCoreImpl/MasterPageResourceImpl.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/portal/Resource/TeamResource.java" afterPath="$PROJECT_DIR$/src/main/java/com/portal/Resource/ResourceCoreImpl/TeamResourceImpl.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/portal/Service/EmployeeService.java" afterPath="$PROJECT_DIR$/src/main/java/com/portal/Service/EmployeeService.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/portal/Service/JobLocationService.java" afterPath="$PROJECT_DIR$/src/main/java/com/portal/Service/JobLocationService.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/portal/Service/MasterPageService.java" afterPath="$PROJECT_DIR$/src/main/java/com/portal/Service/MasterPageService.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/portal/Service/ReferalService.java" afterPath="$PROJECT_DIR$/src/main/java/com/portal/Service/ReferalService.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/portal/Service/TeamService.java" afterPath="$PROJECT_DIR$/src/main/java/com/portal/Service/TeamService.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -57,11 +48,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Department.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/portal/Entity/HrMasterSetUp/Department.java">
+      <file leaf-file-name="EmployeeModel.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/portal/Entity/CoreModel/EmployeeModel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="199">
-              <caret line="20" column="12" lean-forward="true" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
+            <state relative-caret-position="260">
+              <caret line="30" column="9" lean-forward="false" selection-start-line="30" selection-start-column="9" selection-end-line="30" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -69,31 +60,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Designation.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/portal/Entity/HrMasterSetUp/Designation.java">
+      <file leaf-file-name="MasterPageModel.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/portal/Entity/CoreModel/MasterPageModel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="236">
-              <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Grade.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/portal/Entity/HrMasterSetUp/Grade.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
-              <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Qualification.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/portal/Entity/HrMasterSetUp/Qualification.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="319">
-              <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+            <state relative-caret-position="304">
+              <caret line="81" column="0" lean-forward="false" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -101,11 +72,41 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="QualificationType.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/portal/Entity/HrMasterSetUp/QualificationType.java">
+      <file leaf-file-name="DepartmentResourceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/portal/Resource/HrMasterResourceImpl/DepartmentResourceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="259">
-              <caret line="24" column="18" lean-forward="false" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
+            <state relative-caret-position="407">
+              <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MasterPageResourceImpl.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/portal/Resource/ResourceCoreImpl/MasterPageResourceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="464">
+              <caret line="49" column="20" lean-forward="true" selection-start-line="49" selection-start-column="20" selection-end-line="49" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="72" column="0" lean-forward="false" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MasterPageResource.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/portal/Resource/ResourceCore/MasterPageResource.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="15" column="1" lean-forward="false" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -113,53 +114,41 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="JobLocation.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/portal/Entity/JobLocation.java">
+      <file leaf-file-name="DepartmentResource.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/portal/Resource/HrMasterResource/DepartmentResource.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="279">
-              <caret line="25" column="15" lean-forward="true" selection-start-line="25" selection-start-column="15" selection-end-line="25" selection-end-column="15" />
+            <state relative-caret-position="204">
+              <caret line="14" column="22" lean-forward="false" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="22" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Employee.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/portal/Entity/Employee.java">
+      <file leaf-file-name="DesignationResource.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/portal/Resource/HrMasterResource/DesignationResource.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="840">
-              <caret line="48" column="1" lean-forward="true" selection-start-line="48" selection-start-column="1" selection-end-line="48" selection-end-column="1" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DesignationController.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/portal/Controller/HrMasterSetUpController/DesignationController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="520">
-              <caret line="33" column="1" lean-forward="false" selection-start-line="33" selection-start-column="1" selection-end-line="33" selection-end-column="1" />
+            <state relative-caret-position="180">
+              <caret line="10" column="36" lean-forward="false" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MasterPageController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/portal/Controller/MasterPageController.java">
+      <file leaf-file-name="EmploymentResource.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/portal/Resource/HrMasterResource/EmploymentResource.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="20" column="35" lean-forward="true" selection-start-line="20" selection-start-column="35" selection-end-line="20" selection-end-column="35" />
+            <state relative-caret-position="180">
+              <caret line="12" column="33" lean-forward="false" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Employment.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/portal/Entity/HrMasterSetUp/Employment.java">
+      <file leaf-file-name="TeamResourceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/portal/Resource/ResourceCoreImpl/TeamResourceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="319">
-              <caret line="26" column="24" lean-forward="true" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="24" />
+            <state relative-caret-position="141">
+              <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -175,6 +164,11 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>public Department save\(Department department\)\{\n            try \{\n                return departmentRepository\.save\(department\)\;\n            \} catch \(Exception e\) \{\n                e\.printStackTrace\(\)\;\n                return null\;\n            \}\n        \}</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -186,57 +180,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/portal/Entity/MasterPage.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/portal/Entity/Grade.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/portal/Entity/Employment.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/portal/Entity/Designation.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/portal/Controller/MasterPageController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/portal/Repository/EmploymentRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/portal/Repository/GradeRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/portal/Repository/JobLocationRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/portal/Repository/TeamRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/portal/Service/GradeService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/portal/Service/JobLocationService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/portal/Service/MasterPageService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/portal/Service/TeamService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/portal/HiringPortal.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/portal/Service/DesignationService.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/com/portal/Repository/DesignationRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/portal/Service/EmploymentService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/portal/Repository/MasterPageRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/portal/Resource/HrMasterResource/StaffTypeResource.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/portal/Resource/HrMasterResource/QualificatoinTypeResource.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/portal/Resource/HrMasterResource/QualificationResource.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/portal/Resource/HrMasterResource/GradeResource.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/portal/Service/HrMasterServicesImpl/DepartmentService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/portal/Service/HrMasterServicesImpl/DesignationService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/portal/Service/HrMasterServicesImpl/EmploymentService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/portal/Service/HrMasterServicesImpl/GradeService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/portal/Service/HrMasterServicesImpl/QualificationService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/portal/Service/HrMasterServicesImpl/QualificationTypeService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/portal/Service/HrMasterServicesImpl/StaffTypeService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/portal/Resource/HrMasterResourceImpl/DesignationResourceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/portal/Resource/HrMasterResourceImpl/EmploymentResourceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/portal/Resource/HrMasterResourceImpl/GradeResourceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/portal/Resource/HrMasterResourceImpl/QualificationResourceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/portal/Resource/HrMasterResourceImpl/QualificationTypeResourceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/portal/Resource/HrMasterResourceImpl/StaffTypeResourceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/portal/Service/HrMasterService/DepartmentService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/portal/Service/HrMasterService/DesignationService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/portal/Service/HrMasterService/EmploymentService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/portal/Service/HrMasterService/GradeService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/portal/Service/HrMasterService/QualificationService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/portal/Service/HrMasterService/QualificationTypeService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/portal/Service/HrMasterService/StaffTypeService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/portal/Entity/HrMastersProjections/DepartmentProjection.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/portal/Entity/HrMasters/Department.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/portal/Entity/HrMasters/Grade.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/portal/Service/HrMasterServicesImpl/DepartmentServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/portal/Service/HrMasterServicesImpl/DesignationServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/portal/Service/HrMasterServicesImpl/EmploymentServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/portal/Service/HrMasterServicesImpl/GradeServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/portal/Service/HrMasterServicesImpl/QualificationServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/portal/Service/HrMasterServicesImpl/QualificationTypeServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/portal/Service/HrMasterServicesImpl/StaffTypeServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/portal/Service/EmployeeService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/portal/Resource/HrMasterResource/EmploymentResource.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/portal/Resource/HrMasterResource/DesignationResource.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/portal/Resource/HrMasterResourceImpl/DepartmentResourceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/portal/Entity/Core/Employee.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/portal/Entity/Core/JobLocation.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/portal/Entity/Core/MasterPage.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/portal/Entity/Core/ReferalBuddy.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/portal/Entity/Core/Team.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/portal/Entity/CoreModel/EmployeeModel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/portal/Resource/ResourceCoreImpl/MasterPageResource.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/portal/Resource/ResourceCoreImpl/TeamResource.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/portal/Resource/ResourceCoreImpl/TeamResourceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/portal/Resource/ResourceCore/MasterPageResource.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/portal/Entity/ReferalEntity.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/portal/Controller/TeamController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/portal/Entity/Department.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/portal/Entity/StaffType.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/portal/Entity/ReferalBuddy.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/portal/Entity/HrMasterSetUp/Department.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/portal/Entity/HrMasterSetUp/Designation.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/portal/Entity/HrMasterSetUp/Employment.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/portal/Entity/HrMasterSetUp/Grade.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/portal/Entity/HrMasterSetUp/Qualification.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/portal/Entity/HrMasterSetUp/QualificationType.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/portal/Entity/HrMasterSetUp/StaffType.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/portal/Entity/Employee.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/portal/Repository/HrMasterSetRepository/DesignationRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/portal/Repository/HrMasterSetRepository/EmploymentRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/portal/Repository/HrMasterSetRepository/GradeRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/portal/Repository/HrMasterSetRepository/DepartmentRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/portal/Repository/HrMasterSetRepository/QualificationRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/portal/Repository/HrMasterSetRepository/QualificationTypeRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/portal/Repository/HrMasterSetRepository/StaffTypeRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/portal/Repository/HrMasterSetUpRepository/StaffTypeRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/portal/Service/HrMasterSetUpService/DesignationService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/portal/Service/HrMasterSetUpService/EmploymentService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/portal/Service/HrMasterSetUpService/GradeService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/portal/Service/HrMasterSetUpService/QualificationService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/portal/Service/HrMasterSetUpService/DepartmentService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/portal/Service/HrMasterSetUpService/StaffTypeService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/portal/Service/HrMasterSetUpService/QualificationTypeService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/portal/Entity/JobLocation.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/portal/Controller/DesignationController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/portal/Controller/HrMasterSetUpController/DesignationController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/portal/Entity/CoreModel/MasterPageModel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/portal/Resource/ResourceCoreImpl/MasterPageResourceImpl.java" />
       </list>
     </option>
   </component>
@@ -336,25 +330,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="portal" type="462c0819:PsiDirectoryNode" />
-              <item name="Controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HiringPortal" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HiringPortal" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="portal" type="462c0819:PsiDirectoryNode" />
-              <item name="Controller" type="462c0819:PsiDirectoryNode" />
-              <item name="HrMasterSetUpController" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HiringPortal" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HiringPortal" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="portal" type="462c0819:PsiDirectoryNode" />
               <item name="Entity" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -364,8 +339,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="portal" type="462c0819:PsiDirectoryNode" />
-              <item name="Entity" type="462c0819:PsiDirectoryNode" />
-              <item name="HrMasterSetUp" type="462c0819:PsiDirectoryNode" />
+              <item name="Resource" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="HiringPortal" type="b2602c69:ProjectViewProjectNode" />
@@ -374,7 +348,8 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="portal" type="462c0819:PsiDirectoryNode" />
-              <item name="Repository" type="462c0819:PsiDirectoryNode" />
+              <item name="Resource" type="462c0819:PsiDirectoryNode" />
+              <item name="ResourceCore" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="HiringPortal" type="b2602c69:ProjectViewProjectNode" />
@@ -383,27 +358,8 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="portal" type="462c0819:PsiDirectoryNode" />
-              <item name="Repository" type="462c0819:PsiDirectoryNode" />
-              <item name="HrMasterSetUpRepository" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HiringPortal" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HiringPortal" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="portal" type="462c0819:PsiDirectoryNode" />
-              <item name="Service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HiringPortal" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HiringPortal" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="portal" type="462c0819:PsiDirectoryNode" />
-              <item name="Service" type="462c0819:PsiDirectoryNode" />
-              <item name="HrMasterSetUpService" type="462c0819:PsiDirectoryNode" />
+              <item name="Resource" type="462c0819:PsiDirectoryNode" />
+              <item name="ResourceCoreImpl" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="HiringPortal" type="b2602c69:ProjectViewProjectNode" />
@@ -411,6 +367,12 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HiringPortal" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HiringPortal" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -423,8 +385,9 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/portal/Entity" />
     <property name="settings.editor.selected.configurable" value="editing.templates" />
     <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -468,11 +431,11 @@
     <configuration name="MasterPage" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="com.portal.Entity.HrMasterSetUp.*" />
+          <option name="PATTERN" value="com.portal.Entity.HrMastersProjections.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="MAIN_CLASS_NAME" value="com.portal.Entity.MasterPage" />
+      <option name="MAIN_CLASS_NAME" value="com.portal.Entity.Core.MasterPage" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -604,7 +567,56 @@
       <option name="project" value="LOCAL" />
       <updated>1527087957128</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Added some class in masterSetup package or make some new classes as well as interfaces to respective package.">
+      <created>1527151936974</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1527151936974</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Introduce Swagger and Added some new classed like employee also implemented all Entity repository and services">
+      <created>1527178161911</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1527178161911</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Introduce Swagger and Added some new classed like employee also implemented all Entity repository and services">
+      <created>1527225534193</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1527225534193</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Introduce Swagger and Added some new classed like employee also implemented all Entity repository and services">
+      <created>1527225580752</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1527225580752</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Introduce Swagger and Added some new classed like employee also implemented all Entity repository and services">
+      <created>1527226321491</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1527226321491</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Change controller to resource and refactoring coding, made interfaces to service and resource package">
+      <created>1527526955789</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1527526955789</updated>
+    </task>
+    <task id="LOCAL-00010" summary="First Commit to remote repository xebia">
+      <created>1527528497433</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1527528497433</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TodoView">
@@ -621,24 +633,24 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29605263" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.48355263" sideWeight="0.21633889" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34046054" sideWeight="0.11043873" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27960527" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30098686" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4819079" sideWeight="0.7874433" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3464448" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2927383" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24671052" sideWeight="0.7836611" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34046054" sideWeight="0.8895613" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -646,6 +658,34 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.48355263" sideWeight="0.21633889" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="combo" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33552632" sideWeight="0.7836611" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29605263" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.37171054" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4819079" sideWeight="0.7874433" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34795764" sideWeight="0.5" order="5" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -680,115 +720,71 @@
     <MESSAGE value="My first Hiring portal project" />
     <MESSAGE value="Added @Auther to all file &#10;Remove one method from DesignationRepository" />
     <MESSAGE value="Remove extra dependency" />
-    <option name="LAST_COMMIT_MESSAGE" value="Remove extra dependency" />
+    <MESSAGE value="Added some class in masterSetup package or make some new classes as well as interfaces to respective package." />
+    <MESSAGE value="Introduce Swagger and Added some new classed like employee also implemented all Entity repository and services" />
+    <MESSAGE value="Change controller to resource and refactoring coding, made interfaces to service and resource package" />
+    <MESSAGE value="First Commit to remote repository xebia" />
+    <option name="LAST_COMMIT_MESSAGE" value="First Commit to remote repository xebia" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/portal/Service/TeamService.java</url>
-          <line>22</line>
-          <properties />
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/portal/Service/MasterPageService.java</url>
-          <line>21</line>
-          <properties />
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-      </breakpoints>
-      <option name="time" value="10" />
+      <option name="time" value="12" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/portal/Entity/lkjsdf.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/portal/Entity/HrMasters/Department.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="15" column="24" lean-forward="false" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
+        <state relative-caret-position="274">
+          <caret line="27" column="35" lean-forward="false" selection-start-line="26" selection-start-column="3" selection-end-line="27" selection-end-column="35" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/portal/Entity/JonLocation.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/portal/Entity/HrMasters/Designation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="16" column="17" lean-forward="true" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
+        <state relative-caret-position="354">
+          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_162/src.zip!/java/util/Date.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/portal/Entity/HrMasters/Employment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="130" column="13" lean-forward="false" selection-start-line="130" selection-start-column="13" selection-end-line="130" selection-end-column="13" />
+        <state relative-caret-position="304">
+          <caret line="26" column="35" lean-forward="false" selection-start-line="26" selection-start-column="35" selection-end-line="26" selection-end-column="35" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/4.3.14.RELEASE/spring-webmvc-4.3.14.RELEASE.jar!/org/springframework/web/servlet/mvc/method/annotation/ServletInvocableHandlerMethod.class">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/portal/Entity/HrMasters/Grade.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="48" column="23" lean-forward="true" selection-start-line="48" selection-start-column="23" selection-end-line="48" selection-end-column="23" />
+        <state relative-caret-position="314">
+          <caret line="27" column="35" lean-forward="false" selection-start-line="27" selection-start-column="35" selection-end-line="27" selection-end-column="35" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.3.14.RELEASE/spring-web-4.3.14.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/portal/Entity/HrMastersProjections/DepartmentProjection.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
-          <caret line="117" column="0" lean-forward="false" selection-start-line="117" selection-start-column="0" selection-end-line="117" selection-end-column="0" />
+        <state relative-caret-position="100">
+          <caret line="6" column="40" lean-forward="false" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="40" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-commons/1.13.10.RELEASE/spring-data-commons-1.13.10.RELEASE.jar!/org/springframework/data/repository/CrudRepository.class">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/portal/Entity/HrMasters/Qualification.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="15" column="5" lean-forward="true" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/portal/Service/MasterPageService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="11" column="3" lean-forward="false" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/portal/Service/TeamService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="13" column="3" lean-forward="false" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1140">
-          <caret line="15" column="11" lean-forward="true" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HiringPortal.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1375">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="57">
+          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/portal/HiringPortal.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+        <state relative-caret-position="300">
+          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding>
             <element signature="e#317#318#0" expanded="false" />
             <element signature="e#380#381#0" expanded="false" />
@@ -796,147 +792,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/portal/Service/JobLocationService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="18" column="22" lean-forward="false" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/portal/Repository/JobLocationRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="56" column="0" lean-forward="true" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/portal/Repository/TeamRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/portal/Entity/Team.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="17" column="7" lean-forward="true" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/portal/Entity/HrMasterSetUp/StaffType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="23" column="24" lean-forward="true" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/portal/Entity/ReferalBuddy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="27" column="32" lean-forward="true" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/portal/Repository/HrMasterSetUpRepository/DesignationRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="13" column="17" lean-forward="false" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/portal/Repository/HrMasterSetUpRepository/EmploymentRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="11" column="17" lean-forward="false" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/portal/Repository/HrMasterSetUpRepository/GradeRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="13" column="17" lean-forward="false" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/portal/Repository/HrMasterSetUpRepository/DepartmentRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/portal/Repository/HrMasterSetUpRepository/QualificationRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/portal/Repository/HrMasterSetUpRepository/QualificationTypeRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="9" column="17" lean-forward="true" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/portal/Repository/HrMasterSetUpRepository/StaffTypeRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/portal/Service/HrMasterSetUpService/EmploymentService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/portal/Service/HrMasterSetUpService/GradeService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/portal/Service/HrMasterSetUpService/StaffTypeService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/portal/Service/HrMasterService/DepartmentService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
           <caret line="8" column="10" lean-forward="false" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
@@ -946,166 +802,356 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/portal/Service/HrMasterSetUpService/QualificationTypeService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/portal/Service/HrMasterService/DesignationService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="140">
-          <caret line="7" column="10" lean-forward="false" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+          <caret line="8" column="10" lean-forward="false" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/portal/Service/HrMasterSetUpService/QualificationService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/portal/Service/HrMasterService/EmploymentService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+        <state relative-caret-position="140">
+          <caret line="8" column="10" lean-forward="false" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/portal/Service/HrMasterSetUpService/DesignationService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/portal/Service/HrMasterService/GradeService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-40">
+        <state relative-caret-position="140">
+          <caret line="8" column="10" lean-forward="false" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/portal/Service/HrMasterService/QualificationService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="8" column="10" lean-forward="false" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/portal/Service/HrMasterService/QualificationTypeService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="8" column="10" lean-forward="false" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/portal/Service/HrMasterService/StaffTypeService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="8" column="10" lean-forward="false" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/portal/Service/HrMasterServicesImpl/DepartmentServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="14" column="3" lean-forward="true" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/portal/Service/HrMasterServicesImpl/DesignationServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="91">
+          <caret line="15" column="10" lean-forward="false" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/portal/Service/HrMasterServicesImpl/EmploymentServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="15" column="10" lean-forward="false" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/portal/Service/HrMasterServicesImpl/GradeServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="15" column="10" lean-forward="false" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/portal/Service/HrMasterServicesImpl/QualificationServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="14" column="10" lean-forward="false" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/portal/Service/HrMasterServicesImpl/QualificationTypeServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="14" column="10" lean-forward="false" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/portal/Service/HrMasterServicesImpl/StaffTypeServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="49">
+          <caret line="15" column="10" lean-forward="true" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/portal/Service/EmployeeService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4">
+          <caret line="12" column="3" lean-forward="true" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/portal/Service/JobLocationService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="77">
+          <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/portal/Service/MasterPageService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="77">
           <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/portal/CommonConstant/CommonConstant.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/portal/Service/ReferalService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="6" column="3" lean-forward="true" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
+        <state relative-caret-position="77">
+          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/portal/Service/TeamService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="5" column="32" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="5" selection-end-column="32" />
+        <state relative-caret-position="60">
+          <caret line="15" column="8" lean-forward="true" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/portal/Service/HrMasterSetUpService/DepartmentService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/portal/Resource/HrMasterResource/GradeResource.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="13" column="48" lean-forward="true" selection-start-line="13" selection-start-column="48" selection-end-line="13" selection-end-column="48" />
+        <state relative-caret-position="260">
+          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/portal/Repository/MasterPageRepository.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/portal/Resource/HrMasterResource/QualificationResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="10" column="17" lean-forward="false" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/portal/Resource/HrMasterResource/QualificatoinTypeResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="7" column="10" lean-forward="false" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/portal/Resource/HrMasterResource/StaffTypeResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="8" column="10" lean-forward="false" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/portal/Resource/HrMasterResourceImpl/DesignationResourceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/portal/Resource/HrMasterResourceImpl/EmploymentResourceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/portal/Resource/HrMasterResourceImpl/GradeResourceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/portal/Resource/HrMasterResourceImpl/QualificationResourceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/portal/Resource/HrMasterResourceImpl/QualificationTypeResourceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="139">
+          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/portal/Resource/HrMasterResourceImpl/StaffTypeResourceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/portal/Entity/Core/JobLocation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/portal/Entity/Core/ReferalBuddy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/portal/Entity/Core/Team.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="19" column="13" lean-forward="false" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/portal/Entity/Core/Employee.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="616">
+          <caret line="47" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/portal/Entity/Core/MasterPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1640">
+          <caret line="93" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/portal/Entity/CoreModel/EmployeeModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="30" column="9" lean-forward="false" selection-start-line="30" selection-start-column="9" selection-end-line="30" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/portal/Resource/HrMasterResourceImpl/DepartmentResourceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="407">
+          <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/portal/Resource/ResourceCoreImpl/TeamResourceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/portal/Resource/HrMasterResource/DepartmentResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="14" column="22" lean-forward="false" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/portal/Resource/HrMasterResource/DesignationResource.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
-          <caret line="11" column="17" lean-forward="false" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+          <caret line="10" column="36" lean-forward="false" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/portal/Entity/MasterPage.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/portal/Resource/HrMasterResource/EmploymentResource.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="56" column="0" lean-forward="true" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+        <state relative-caret-position="180">
+          <caret line="12" column="33" lean-forward="false" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/portal/Controller/TeamController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/portal/Resource/ResourceCore/MasterPageResource.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="25" column="23" lean-forward="true" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/portal/Entity/HrMasterSetUp/Department.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="20" column="12" lean-forward="true" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
+        <state relative-caret-position="300">
+          <caret line="15" column="1" lean-forward="false" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/portal/Entity/HrMasterSetUp/Employment.java">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="26" column="24" lean-forward="true" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="24" />
+        <state relative-caret-position="360">
+          <caret line="72" column="0" lean-forward="false" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/portal/Entity/HrMasterSetUp/Designation.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/portal/Entity/CoreModel/MasterPageModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/portal/Entity/HrMasterSetUp/Grade.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/portal/Entity/HrMasterSetUp/Qualification.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+        <state relative-caret-position="304">
+          <caret line="81" column="0" lean-forward="false" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/portal/Entity/HrMasterSetUp/QualificationType.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/portal/Resource/ResourceCoreImpl/MasterPageResourceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="24" column="18" lean-forward="false" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/portal/Entity/JobLocation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="25" column="15" lean-forward="true" selection-start-line="25" selection-start-column="15" selection-end-line="25" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/portal/Entity/Employee.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="840">
-          <caret line="48" column="1" lean-forward="true" selection-start-line="48" selection-start-column="1" selection-end-line="48" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/portal/Controller/MasterPageController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="20" column="35" lean-forward="true" selection-start-line="20" selection-start-column="35" selection-end-line="20" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/portal/Controller/HrMasterSetUpController/DesignationController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="520">
-          <caret line="33" column="1" lean-forward="false" selection-start-line="33" selection-start-column="1" selection-end-line="33" selection-end-column="1" />
+        <state relative-caret-position="464">
+          <caret line="49" column="20" lean-forward="true" selection-start-line="49" selection-start-column="20" selection-end-line="49" selection-end-column="20" />
           <folding />
         </state>
       </provider>

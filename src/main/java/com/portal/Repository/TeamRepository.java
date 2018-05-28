@@ -1,6 +1,6 @@
 package com.portal.Repository;
 
-import com.portal.Entity.Team;
+import com.portal.Entity.Core.Team;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 

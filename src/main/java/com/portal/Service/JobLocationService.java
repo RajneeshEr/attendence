@@ -1,7 +1,7 @@
 package com.portal.Service;
 
 import com.portal.CommonConstant.CommonConstant;
-import com.portal.Entity.JobLocation;
+import com.portal.Entity.Core.JobLocation;
 import com.portal.Repository.JobLocationRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

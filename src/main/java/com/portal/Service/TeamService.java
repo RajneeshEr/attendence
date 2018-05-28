@@ -1,7 +1,7 @@
 package com.portal.Service;
 
 import com.portal.CommonConstant.CommonConstant;
-import com.portal.Entity.Team;
+import com.portal.Entity.Core.Team;
 import com.portal.Repository.TeamRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

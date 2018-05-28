@@ -1,6 +1,6 @@
 package com.portal.Resource.HrMasterResource;
 
-import com.portal.Entity.MasterPage;
+import com.portal.Entity.Core.MasterPage;
 import org.springframework.web.bind.annotation.*;
 
 /**

@@ -1,17 +1,19 @@
-package com.portal.Service.HrMasterServices;
+package com.portal.Service.HrMasterServicesImpl;
 
 import com.portal.CommonConstant.CommonConstant;
-import com.portal.Entity.HrMasterSetUp.QualificationType;
+import com.portal.Entity.HrMasters.QualificationType;
 import com.portal.Repository.HrMasterRepositories.QualificationTypeRepository;
+import com.portal.Service.HrMasterService.QualificationTypeService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 /**
  * @author rajneesh yadav
  * email er.rajyd@gmamil.com
  * date 24/5/2018
  */
-@Service
-public class QualificationTypeService implements CommonConstant{
+@Component
+public class QualificationTypeServiceImpl implements CommonConstant,QualificationTypeService {
 
     @Autowired
     private QualificationTypeRepository qualificationTypeRepository;

@@ -1,7 +1,6 @@
 package com.portal.Repository.HrMasterRepositories;
 
-import com.portal.Entity.HrMasterSetUp.Department;
-import org.springframework.data.jpa.repository.JpaRepository;
+import com.portal.Entity.HrMasters.Department;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 

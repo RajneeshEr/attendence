@@ -1,17 +1,20 @@
-package com.portal.Service.HrMasterServices;
+package com.portal.Service.HrMasterServicesImpl;
 
 import com.portal.CommonConstant.CommonConstant;
-import com.portal.Entity.HrMasterSetUp.StaffType;
+import com.portal.Entity.HrMasters.StaffType;
 import com.portal.Repository.HrMasterRepositories.StaffTypeRepository;
+import com.portal.Service.HrMasterService.StaffTypeService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
+
 /**
  * @author rajneesh yadav
  * email er.rajyd@gmamil.com
  * date 24/5/2018
  */
-@Service
-public class StaffTypeService implements CommonConstant {
+@Component
+public class StaffTypeServiceImpl implements CommonConstant,StaffTypeService {
 
     @Autowired
     private StaffTypeRepository staffTypeRepository;

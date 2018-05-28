@@ -1,20 +1,20 @@
-package com.portal.Service.HrMasterServices;
+package com.portal.Service.HrMasterServicesImpl;
 
 import com.portal.CommonConstant.CommonConstant;
-import com.portal.Entity.HrMasterSetUp.Grade;
+import com.portal.Entity.HrMasters.Grade;
 import com.portal.Repository.HrMasterRepositories.GradeRepository;
+import com.portal.Service.HrMasterService.GradeService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
-
-import java.util.List;
 
 /**
  * @author rajneesh yadav
  * email er.rajyd@gmamil.com
  * date 23/5/2018
  */
-@Service
-public class GradeService implements CommonConstant{
+@Component
+public class GradeServiceImpl implements CommonConstant,GradeService {
 
     @Autowired
     private GradeRepository gradeRepository;

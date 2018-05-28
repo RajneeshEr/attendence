@@ -1,21 +1,22 @@
 package com.portal.Resource.HrMasterResource;
 
-import com.portal.Service.HrMasterServices.DepartmentService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import com.portal.Entity.HrMasters.Department;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * @author rajneesh yadav
  * email er.rajyd@gmamil.com
- * date 24/5/2018
+ * date 28/5/2018
  */
-@RestController
 @RequestMapping("/rest/department")
-public class DepartmentResource {
+public interface DepartmentResource {
 
-    @Autowired
-    private DepartmentService departmentService;
+    @PostMapping("/save")
+    public String save(@RequestBody Department object) ;
+
+    @GetMapping("/get")
+    @CrossOrigin
+    public Department get(long id) ;
 
 
 }

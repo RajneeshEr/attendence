@@ -1,9 +1,10 @@
 package com.portal.Entity.HrMasters;
 
-import lombok.Getter;
-import lombok.Setter;
+import com.portal.Entity.Employee;
+import lombok.Data;
 
 import java.io.Serializable;
+import java.util.Set;
 
 import javax.persistence.*;
 
@@ -13,8 +14,7 @@ import javax.persistence.*;
  * date 21/5/2018
  */
 @Entity
-@Getter
-@Setter
+@Data
 public class Designation implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -23,7 +23,8 @@ public class Designation implements Serializable {
     private String code;
 
     private String name;
-
+    @OneToMany
+    private Set<Employee> employee;
     public Designation() {
     }
 

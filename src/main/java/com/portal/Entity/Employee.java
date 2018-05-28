@@ -21,6 +21,7 @@ public class Employee implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     long id;
 
+    private String role;
     @Column(unique = true)
     private String code;
     private String firstName;
@@ -37,11 +38,10 @@ public class Employee implements Serializable {
     private Designation designation;
     @ManyToOne(cascade = CascadeType.ALL,fetch = FetchType.EAGER)
     private StaffType staffType;
-    @ManyToOne(cascade = CascadeType.ALL,fetch = FetchType.EAGER)
+   /* @ManyToOne(cascade = CascadeType.ALL,fetch = FetchType.EAGER)
     private Qualification qualification;
     @ManyToOne(cascade = CascadeType.ALL,fetch = FetchType.EAGER)
-    private Employment employment;
-
+    private Employment employment;*/
 
     public Employee() {
     }

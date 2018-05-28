@@ -1,6 +1,7 @@
 package com.portal.Repository.HrMasterRepositories;
 
-import com.portal.Entity.HrMasterSetUp.Grade;
+import com.portal.Entity.HrMasters.Grade;
+import com.portal.Entity.HrMastersProjections.GradeProjection;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
@@ -10,7 +11,7 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
  * email er.rajyd@gmamil.com
  * date 23/5/2018
  */
-@RepositoryRestResource
+@RepositoryRestResource(excerptProjection = GradeProjection.class)
 public interface GradeRepository extends CrudRepository<Grade, Long> {
     Grade findByName(String name);
     Grade findById(long id);

@@ -12,5 +12,8 @@ public interface CommonConstant {
     String NOT_DELETE="Data couldn't deleted successfully";
     String UPDATE="Data update successfully";
     String NOT_UPDATE="Data couldn't update successfully";
+    String SUCCESS_PROCESS = "Successfully processed";
+    String INTERNAL_SERVER_EXCEPTION = "Server unable to process request";
+    String BAD_REQUEST_EXCEPTION= "Requested parameters are not valid";
 
 }

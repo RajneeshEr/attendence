@@ -1,9 +1,11 @@
-package com.portal.Service.HrMasterServices;
+package com.portal.Service.HrMasterServicesImpl;
 
 import com.portal.CommonConstant.CommonConstant;
-import com.portal.Entity.HrMasterSetUp.Employment;
+import com.portal.Entity.HrMasters.Employment;
 import com.portal.Repository.HrMasterRepositories.EmploymentRepository;
+import com.portal.Service.HrMasterService.EmploymentService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 /**
@@ -11,8 +13,8 @@ import org.springframework.stereotype.Service;
  * email er.rajyd@gmamil.com
  * date 23/5/2018
  */
-@Service
-public class EmploymentService implements CommonConstant {
+@Component
+public class EmploymentServiceImpl implements CommonConstant,EmploymentService {
 
     @Autowired
     private EmploymentRepository employmentRepository;

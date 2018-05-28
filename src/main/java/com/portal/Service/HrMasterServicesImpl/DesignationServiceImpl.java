@@ -1,20 +1,20 @@
-package com.portal.Service.HrMasterServices;
+package com.portal.Service.HrMasterServicesImpl;
 
 import com.portal.CommonConstant.CommonConstant;
-import com.portal.Entity.HrMasterSetUp.Designation;
+import com.portal.Entity.HrMasters.Designation;
 import com.portal.Repository.HrMasterRepositories.DesignationRepository;
+import com.portal.Service.HrMasterService.DesignationService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
-
-import java.util.List;
 
 /**
  * @author rajneesh yadav
  * email er.rajyd@gmamil.com
  * date 23/5/2018
  */
-@Service
-public class DesignationService implements CommonConstant {
+@Component
+public class DesignationServiceImpl implements CommonConstant,DesignationService {
 
     @Autowired
     private DesignationRepository designationRepository;

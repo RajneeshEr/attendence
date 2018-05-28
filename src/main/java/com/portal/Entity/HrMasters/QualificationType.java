@@ -1,8 +1,6 @@
 package com.portal.Entity.HrMasters;
 
-import lombok.Getter;
-import lombok.Setter;
-
+import lombok.Data;
 import java.io.Serializable;
 
 import javax.persistence.*;
@@ -13,8 +11,7 @@ import javax.persistence.*;
  * date 24/5/2018
  */
 @Entity
-@Getter
-@Setter
+@Data
 public class QualificationType implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

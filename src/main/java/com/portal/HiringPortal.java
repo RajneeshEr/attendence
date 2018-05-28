@@ -14,4 +14,3 @@ public class HiringPortal {
         SpringApplication.run(HiringPortal.class, args);
     }
 }
-

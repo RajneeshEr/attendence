@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * email er.rajyd@gmamil.com
  * date 28/5/2018
  */
-@RequestMapping("/rest/qualy")
-public interface QualificationResource {
+@RequestMapping("/rest/qulyType")
+public interface QualificatoinTypeResource {
 
 }

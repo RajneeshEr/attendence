@@ -1,5 +1,6 @@
 package com.portal.Entity.Core;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -22,6 +23,7 @@ public class JobLocation implements Serializable {
 
     private String jobLocationName;
 
+    @JsonIgnore
     @ManyToOne
     private MasterPage masterPage;
 

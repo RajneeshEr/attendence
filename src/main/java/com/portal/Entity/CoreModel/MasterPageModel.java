@@ -18,7 +18,7 @@ public class MasterPageModel {
 
     private long mrfNumber;
 
-    private Designation designation;
+    private String designation;
 
     private String billability;
 
@@ -79,5 +79,4 @@ public class MasterPageModel {
 
     public MasterPageModel() {
     }
-
 }

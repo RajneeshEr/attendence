@@ -1,5 +1,6 @@
 package com.portal.Entity.Core;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -16,7 +17,8 @@ import javax.persistence.*;
 @Getter
 @Setter
 public class ReferalBuddy implements Serializable {
-    @Id
+
+    @Id @JsonIgnore
     @GeneratedValue(strategy = GenerationType.AUTO)
     long id;
 

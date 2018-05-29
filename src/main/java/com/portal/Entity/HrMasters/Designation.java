@@ -1,5 +1,6 @@
 package com.portal.Entity.HrMasters;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.portal.Entity.Core.Employee;
 import lombok.Data;
 
@@ -23,8 +24,11 @@ public class Designation implements Serializable {
     private String code;
 
     private String name;
+
+    @JsonIgnore
     @OneToMany
     private Set<Employee> employee;
+
     public Designation() {
     }
 

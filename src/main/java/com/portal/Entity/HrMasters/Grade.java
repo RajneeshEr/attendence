@@ -1,6 +1,7 @@
 package com.portal.Entity.HrMasters;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.portal.Entity.Core.Employee;
 import lombok.Data;
 import java.io.Serializable;
@@ -24,7 +25,7 @@ public class Grade implements Serializable {
     private String code;
     @Column(unique = true)
     private String name;
-    @OneToMany
+    @OneToMany @JsonIgnore
     private Set<Employee> employee;
 
     public Grade() {

@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 public interface MasterPageResource {
 
     @PostMapping("/saveMasterPage")
-    String saveMasterPage(@RequestBody MasterPageModel masterPage);
+    String saveMasterPage(@RequestBody MasterPage masterPage);
 
     @GetMapping("/findMaster/{id}")
     MasterPage getMasterById(@PathVariable("id") long id);

@@ -4,6 +4,7 @@ import com.portal.Entity.HrMasters.Designation;
 import com.portal.Entity.HrMasters.Employment;
 import com.portal.Entity.HrMasters.Grade;
 import com.portal.Entity.HrMasters.Qualification;
+import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -19,8 +20,7 @@ import javax.persistence.*;
  * date 21/5/2018
  */
 @Entity
-@Getter
-@Setter
+@Data
 public class MasterPage implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

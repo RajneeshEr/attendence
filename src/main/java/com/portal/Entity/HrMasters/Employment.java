@@ -1,5 +1,6 @@
 package com.portal.Entity.HrMasters;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.portal.Entity.Core.Employee;
 import lombok.Data;
 
@@ -23,7 +24,7 @@ public class Employment implements Serializable {
     @Column(unique = true)
     private String code;
     private String type;
-    @OneToMany
+    @OneToMany @JsonIgnore
     private Set<Employee> employee;
 
     public Employment() {

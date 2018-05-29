@@ -27,10 +27,10 @@ public class MasterPageResourceImpl implements CommonConstant,MasterPageResource
     ApplicationResponse applicationResponse;
 
     @Override
-    public String saveMasterPage(@RequestBody MasterPageModel masterPageModel){
-        Mapper mapper = new DozerBeanMapper();
+    public String saveMasterPage(@RequestBody MasterPage masterPage){
+        /*Mapper mapper = new DozerBeanMapper();
         MasterPage masterPage=mapper.map(masterPageModel,MasterPage.class);
-
+*/
         if (masterPageService.save(masterPage)!=null){
             return SAVE;
         }else {

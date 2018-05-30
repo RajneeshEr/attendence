@@ -5,6 +5,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.io.Serializable;
+import java.util.Set;
 
 import javax.persistence.*;
 
@@ -23,10 +24,9 @@ public class JobLocation implements Serializable {
 
     private String jobLocationName;
 
-    @JsonIgnore
-    @ManyToOne
-    private MasterPage masterPage;
-
+    /*@OneToMany
+    private Set<MasterPage> masterPage;
+*/
     public JobLocation() {
     }
 

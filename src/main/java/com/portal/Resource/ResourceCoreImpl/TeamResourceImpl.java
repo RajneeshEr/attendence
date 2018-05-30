@@ -2,7 +2,7 @@ package com.portal.Resource.ResourceCoreImpl;
 
 import com.portal.CommonConstant.CommonConstant;
 import com.portal.Entity.Core.Team;
-import com.portal.Service.TeamService;
+import com.portal.Service.CoreImpl.TeamService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

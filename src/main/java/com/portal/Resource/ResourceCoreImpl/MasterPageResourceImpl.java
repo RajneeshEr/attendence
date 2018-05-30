@@ -5,10 +5,7 @@ import com.portal.Config.ApplicationResponse;
 import com.portal.Entity.Core.MasterPage;
 import com.portal.Entity.CoreModel.MasterPageModel;
 import com.portal.Resource.ResourceCore.MasterPageResource;
-import com.portal.Service.MasterPageService;
-import org.aspectj.lang.annotation.Before;
-import org.dozer.DozerBeanMapper;
-import org.dozer.Mapper;
+import com.portal.Service.Core.MasterPageService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -26,12 +23,11 @@ public class MasterPageResourceImpl implements CommonConstant,MasterPageResource
     @Autowired
     ApplicationResponse applicationResponse;
 
+    //private Mapper mapper;
+
     @Override
-    public String saveMasterPage(@RequestBody MasterPage masterPage){
-        /*Mapper mapper = new DozerBeanMapper();
-        MasterPage masterPage=mapper.map(masterPageModel,MasterPage.class);
-*/
-        if (masterPageService.save(masterPage)!=null){
+    public String saveMasterPage(@RequestBody MasterPageModel masterPageModel){
+        if (masterPageService.save(masterPageModel)!=null){
             return SAVE;
         }else {
             return NOT_SAVE;
@@ -42,8 +38,6 @@ public class MasterPageResourceImpl implements CommonConstant,MasterPageResource
     public void before() throws Exception {
         mapper = new DozerBeanMapper();
     }*/
-
-
 
    /* @Override
     public String saveMasterPage(MasterPageModel masterPage) {
@@ -59,11 +53,9 @@ public class MasterPageResourceImpl implements CommonConstant,MasterPageResource
         }
     }
 
-
-
-
-
-
-
+    @Override
+    public Iterable<MasterPage> findAll(){
+        return masterPageService.findAll();
+    }
 
 }

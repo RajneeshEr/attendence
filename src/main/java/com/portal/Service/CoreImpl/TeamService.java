@@ -1,4 +1,4 @@
-package com.portal.Service;
+package com.portal.Service.CoreImpl;
 
 import com.portal.CommonConstant.CommonConstant;
 import com.portal.Entity.Core.Team;
@@ -65,6 +65,4 @@ public class TeamService implements CommonConstant{
         }
     }
 
-
 }
-

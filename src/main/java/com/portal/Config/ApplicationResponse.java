@@ -1,5 +1,6 @@
 package com.portal.Config;
 
+import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.http.HttpStatus;
@@ -10,9 +11,7 @@ import org.springframework.stereotype.Component;
  * email er.rajyd@gmamil.com
  * date 25/5/2018
  */
-
-@Getter
-@Setter
+@Data
 @Component
 public class ApplicationResponse {
 

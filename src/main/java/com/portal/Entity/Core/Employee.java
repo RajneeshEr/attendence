@@ -32,16 +32,16 @@ public class Employee implements Serializable {
     private String mobileNumber;
     private String passportNumber;
 
-    @ManyToOne(cascade = CascadeType.ALL,fetch = FetchType.EAGER)
+    @ManyToOne(fetch = FetchType.EAGER)
     private Department department;
-    @ManyToOne(cascade = CascadeType.ALL,fetch = FetchType.EAGER)
+    @ManyToOne(fetch = FetchType.EAGER)
     private Designation designation;
-    @ManyToOne(cascade = CascadeType.ALL,fetch = FetchType.EAGER)
+    @ManyToOne(fetch = FetchType.EAGER)
     private StaffType staffType;
-   /* @ManyToOne(cascade = CascadeType.ALL,fetch = FetchType.EAGER)
+    @ManyToOne(fetch = FetchType.EAGER)
     private Qualification qualification;
-    @ManyToOne(cascade = CascadeType.ALL,fetch = FetchType.EAGER)
-    private Employment employment;*/
+    @ManyToOne(fetch = FetchType.EAGER)
+    private Employment employment;
 
     public Employee() {
     }

@@ -25,7 +25,7 @@ public class Grade implements Serializable {
     private String code;
     @Column(unique = true)
     private String name;
-    @OneToMany @JsonIgnore
+    @OneToMany
     private Set<Employee> employee;
 
     public Grade() {

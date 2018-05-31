@@ -5,7 +5,6 @@ import org.springframework.data.rest.core.config.Projection;
 
 @Projection(name = "designationProjection" , types = Designation.class)
 public interface DesignationProjection  {
+    String getId();
     String getCode();
-    String getName();
-
 }

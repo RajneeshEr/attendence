@@ -3,14 +3,14 @@ package com.portal.Service.CoreImpl;
 import com.portal.CommonConstant.CommonConstant;
 import com.portal.Entity.Core.MasterPage;
 import com.portal.Entity.CoreModel.MasterPageModel;
-import com.portal.Repository.EmployeeRepository;
+import com.portal.Repository.CoreRepository.EmployeeRepository;
 import com.portal.Repository.HrMasterRepositories.DesignationRepository;
 import com.portal.Repository.HrMasterRepositories.EmploymentRepository;
 import com.portal.Repository.HrMasterRepositories.GradeRepository;
 import com.portal.Repository.HrMasterRepositories.QualificationRepository;
-import com.portal.Repository.JobLocationRepository;
-import com.portal.Repository.MasterPageRepository;
-import com.portal.Repository.TeamRepository;
+import com.portal.Repository.CoreRepository.JobLocationRepository;
+import com.portal.Repository.CoreRepository.MasterPageRepository;
+import com.portal.Repository.CoreRepository.TeamRepository;
 import com.portal.Service.Core.MasterPageService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -140,7 +140,6 @@ public class MasterPageServiceImpl implements CommonConstant,MasterPageService {
         } catch (Exception e) {
             masterPages=null;
             e.printStackTrace();
-
         }
         return masterPages;
     }

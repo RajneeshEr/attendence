@@ -25,7 +25,6 @@ public class Designation implements Serializable {
 
     private String name;
 
-    @JsonIgnore
     @OneToMany
     private Set<Employee> employee;
 

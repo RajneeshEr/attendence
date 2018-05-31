@@ -1,4 +1,4 @@
-package com.portal.Repository;
+package com.portal.Repository.CoreRepository;
 
 import com.portal.Entity.Core.MasterPage;
 import org.springframework.data.repository.CrudRepository;

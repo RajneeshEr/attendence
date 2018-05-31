@@ -2,7 +2,7 @@ package com.portal.Service.CoreImpl;
 
 import com.portal.CommonConstant.CommonConstant;
 import com.portal.Entity.Core.Employee;
-import com.portal.Repository.EmployeeRepository;
+import com.portal.Repository.CoreRepository.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
  * date 23/5/2018
  */
 @Component
-public class EmployeeService implements CommonConstant {
+public class EmployeeServiceImpl implements CommonConstant {
 
     @Autowired
     private EmployeeRepository employeeRepository;

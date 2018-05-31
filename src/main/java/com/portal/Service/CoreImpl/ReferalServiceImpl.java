@@ -2,7 +2,7 @@ package com.portal.Service.CoreImpl;
 
 import com.portal.CommonConstant.CommonConstant;
 import com.portal.Entity.Core.ReferalBuddy;
-import com.portal.Repository.ReferalBuddyRepository;
+import com.portal.Repository.CoreRepository.ReferalBuddyRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 /**
@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
  * date 23/5/2018
  */
 @Service
-public class ReferalService implements CommonConstant{
+public class ReferalServiceImpl implements CommonConstant{
 
     @Autowired
     private ReferalBuddyRepository referalBuddyRepository;

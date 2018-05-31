@@ -2,7 +2,7 @@ package com.portal.Service.CoreImpl;
 
 import com.portal.CommonConstant.CommonConstant;
 import com.portal.Entity.Core.JobLocation;
-import com.portal.Repository.JobLocationRepository;
+import com.portal.Repository.CoreRepository.JobLocationRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,7 +14,7 @@ import java.util.List;
  * date 23/5/2018
  */
 @Service
-public class JobLocationService implements CommonConstant {
+public class JobLocationServiceimpl implements CommonConstant {
 
     @Autowired
     private JobLocationRepository jobLocationRepository;

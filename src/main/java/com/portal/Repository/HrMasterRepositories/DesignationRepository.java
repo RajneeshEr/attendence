@@ -18,5 +18,5 @@ public interface DesignationRepository extends CrudRepository<Designation, Long>
     Designation findByCode(String code);
     Designation findByName(String name);
     Designation findById(long id);
-    Collection<DesignationProjection> findAllProjectedBy();
+    List<DesignationProjection> findAllProjectedBy();
 }

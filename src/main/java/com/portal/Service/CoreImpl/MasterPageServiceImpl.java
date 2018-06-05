@@ -25,20 +25,22 @@ public class MasterPageServiceImpl implements CommonConstant,MasterPageService {
 
     @Autowired
     private MasterPageRepository masterPageRepository;
+
     @Autowired
     private DesignationRepository designationRepository;
+
     @Autowired
     private TeamRepository teamRepository;
+
     @Autowired
     private JobLocationRepository jobLocationRepository;
+
     @Autowired
     EmploymentRepository employmentRepository;
-    @Autowired
-    private GradeRepository gradeRepository;
+
     @Autowired
     private QualificationRepository qualificationRepository;
-    @Autowired
-    private EmployeeRepository employeeRepository;
+
 
     //this method will work for save or update object
     public MasterPage save(MasterPageModel masterPageModel){
@@ -54,14 +56,11 @@ public class MasterPageServiceImpl implements CommonConstant,MasterPageService {
 
     public MasterPage convertModelToEntity(MasterPageModel masterPageModel){
         MasterPage masterPage=new MasterPage(masterPageModel);
-        long desiId=masterPageModel.getDesignation();
-        long gradeId=masterPageModel.getGrade();
-        long teamId=masterPageModel.getTeam();
-        long jobLocId=masterPageModel.getJobLocation();
-        long employmentId=masterPageModel.getEmployment();
-        long qualificationId=masterPageModel.getQualification();
-        long reportingManagerId=masterPageModel.getReportingManager();
-
+        long desiId=masterPageModel.getDesignationId();
+        //long gradeId=masterPageModel.getGradeId();  // this is not required replace with band
+        long teamId=masterPageModel.getProjectId();  // project Id is team id
+        //long jobLocId=masterPageModel.getJobLocation();
+        long employmentId=masterPageModel.getEmploymentId();
 
         //master page designation
         if(desiId>0){
@@ -70,26 +69,13 @@ public class MasterPageServiceImpl implements CommonConstant,MasterPageService {
             }else { masterPage.setDesignation(null);}
         }else { masterPage.setDesignation(null);}
 
-        //master page grdae
-        if (gradeId>0) {
-            if (gradeRepository.existsById(gradeId)) {
-                masterPage.setGrade(gradeRepository.findById(gradeId));
-            } else { masterPage.setGrade(null); }
-        }else{ masterPage.setGrade(null);}
 
         //master page team
         if (teamId>0) {
             if (teamRepository.existsById(teamId)) {
-                masterPage.setTeam(teamRepository.findById(teamId));
-            } else { masterPage.setTeam(null); }
-        }else{ masterPage.setTeam(null);}
-
-        //master page job location
-        if (jobLocId>0) {
-            if (jobLocationRepository.existsById(jobLocId)) {
-                masterPage.setJobLocation(jobLocationRepository.findById(jobLocId));
-            } else { masterPage.setJobLocation(null); }
-        }else{ masterPage.setJobLocation(null);}
+                masterPage.setProject(teamRepository.findById(teamId));
+            } else { masterPage.setProject(null); }
+        }else{ masterPage.setProject(null);}
 
         //master page employment
         if (employmentId>0) {
@@ -97,20 +83,6 @@ public class MasterPageServiceImpl implements CommonConstant,MasterPageService {
                 masterPage.setEmployment(employmentRepository.findById(employmentId));
             } else { masterPage.setEmployment(null); }
         }else{ masterPage.setEmployment(null);}
-
-        //master page employment
-        if (qualificationId>0) {
-            if (qualificationRepository.existsById(qualificationId)) {
-                masterPage.setQualification(qualificationRepository.findById(qualificationId));
-            } else { masterPage.setQualification(null); }
-        }else{ masterPage.setQualification(null);}
-
-        //master page employment
-        if (reportingManagerId>0) {
-            if (employeeRepository.existsById(reportingManagerId)) {
-                masterPage.setReportingManager(employeeRepository.findById(reportingManagerId));
-            } else { masterPage.setReportingManager(null); }
-        }else{ masterPage.setReportingManager(null);}
 
         return masterPage;
     }
@@ -153,6 +125,5 @@ public class MasterPageServiceImpl implements CommonConstant,MasterPageService {
             return NOT_DELETE;
         }
     }
-
 
 }

@@ -2,10 +2,12 @@ package com.portal.Resource.ResourceMasterConfigImpl;
 
 import com.portal.Resource.ResourceMasterConfig.MasterConfig;
 import com.portal.Service.MasterConfig.ListConfig;
+import org.json.JSONArray;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 /**
  * @author rajneesh yadav
@@ -18,8 +20,8 @@ public class MasterConfigImpl implements MasterConfig{
     ListConfig listConfig;
 
     @Override
-    public ArrayList findAllConfigDetails(){
-        ArrayList configList=null;
+    public HashMap findAllConfigDetails(){
+        HashMap configList=null;
         if (listConfig.configListingOfMaster()!=null){
             configList = listConfig.configListingOfMaster();
         }

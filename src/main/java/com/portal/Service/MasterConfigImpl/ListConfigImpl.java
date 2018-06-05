@@ -1,15 +1,13 @@
 package com.portal.Service.MasterConfigImpl;
 
-
 import com.portal.Repository.CoreRepository.TeamRepository;
 import com.portal.Repository.HrMasterRepositories.DesignationRepository;
-import com.portal.Repository.HrMasterRepositories.GradeRepository;
+import com.portal.Repository.HrMasterRepositories.EmploymentRepository;
 import com.portal.Service.MasterConfig.ListConfig;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashMap;
 
 /**
  * @author rajneesh yadav
@@ -21,18 +19,24 @@ public class ListConfigImpl implements ListConfig {
 
     @Autowired
     DesignationRepository designationRepository;
+
     @Autowired
     TeamRepository teamRepository;
-    @Autowired
-    GradeRepository gradeRepository;
 
-    public ArrayList configListingOfMaster(){
-        ArrayList templist=new ArrayList();
+    @Autowired
+    EmploymentRepository employmentRepository;
+
+
+
+    public HashMap configListingOfMaster(){
+        HashMap hashMap= new HashMap();
         try {
-            templist.add(designationRepository.findAllProjectedBy());
+            hashMap.put("project",teamRepository.findAllProjectedBy()); // index 0 project with id and code
+            hashMap.put("designation",designationRepository.findAllProjectedBy()); // index 1 designation with id and code
+            hashMap.put("employment",employmentRepository.findAllProjectedBy()); // index 1 designation with id and code
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return templist;
+        return hashMap;
     }
 }

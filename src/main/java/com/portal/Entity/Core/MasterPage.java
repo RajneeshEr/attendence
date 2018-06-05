@@ -35,91 +35,98 @@ public class MasterPage implements Serializable {
     private long mrfNumber;
 
     public MasterPage(MasterPageModel masterPageModel){
+        this.qualification=masterPageModel.getQualification();
+        this.currency=masterPageModel.getCurrency();
+        this.currencyType=masterPageModel.getCurrencyType();
+        this.budgetedSalaryMin=masterPageModel.getBudgetedSalaryMin();
+        this.budgetedSalaryMax=masterPageModel.getBudgetedSalaryMax();
+        this.projectDuration=masterPageModel.getProjectDuration();
         this.billability=masterPageModel.getBillability();
         this.budgetScope=masterPageModel.getBudgetScope();
-        this.backFill=masterPageModel.getBackFill();
-        this.skillSet=masterPageModel.getSkillSet();
-        this.skillSet=masterPageModel.getSkillSet();
-        this.expectedMaxSalary=masterPageModel.getExpectedMaxSalary();
-        this.expectedMinSalary=masterPageModel.getExpectedMinSalary();
-        this.businessDate=masterPageModel.getBusinessDate();
-        this.justification=masterPageModel.getJustification();
+        this.newReplace=masterPageModel.getNewReplace();
+        this.travelReady=masterPageModel.getTravelReady();
+        this.passportReq=masterPageModel.getPassportReq();
         this.numberOfOpenings=masterPageModel.getNumberOfOpenings();
-        this.keyRequirementForPostion=masterPageModel.getKeyRequirementForPostion();
-        this.detailedJobDescription=masterPageModel.getDetailedJobDescription();
-        this.minExperience=masterPageModel.getMinExperience();
-        this.maxExperience=masterPageModel.getMaxExperience();
-        this.assetsRequired=masterPageModel.getAssetsRequired();
-        this.referalBuddyName=masterPageModel.getReferalBuddyName();
+        this.nopJustification=masterPageModel.getNopJustification();
+        this.assetReq=masterPageModel.getAssetReq();
+        this.assetReqJustification=masterPageModel.getAssetReqJustification();
+        this.bdDate=masterPageModel.getBdDate();
+        this.bdDateJustification=masterPageModel.getBdDateJustification();
+        this.majorSkills=masterPageModel.getMajorSkills();
+        this.minorSkills=masterPageModel.getMinorSkills();
+        this.jDesc=masterPageModel.getjDesc();
+        this.explvlMin=masterPageModel.getExplvlMin();
+        this.explvlMax=masterPageModel.getExplvlMax();
+        this.accessRequired=masterPageModel.getAccessRequired();
+        this.hiringManager=masterPageModel.getHiringManager();
+        this.buddyName=masterPageModel.getBuddyName();
     }
-
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name="designation_id")
     private Designation designation;
 
-    private String billability;
-
-    private String budgetScope;
-
-    private String backFill;
-
     //private Set<String> costCode;
 
-    @ManyToOne
-    @JoinColumn(name="grade_id")
-    private Grade grade;
-
-    private String skillSet;
-
-    double expectedMinSalary;
-
-    double expectedMaxSalary;
-
-    private Date businessDate;        // current date
-
-    private String justification;
-
-    private Integer numberOfOpenings;
-
-    //private Collection<String> businessEntityName;
-
-    @ManyToOne
-    @JoinColumn(name="team_id")
-    private Team team;
-
-    //always a kind of List or Collection (Type) require for @OneToMany
-    @ManyToOne
-    @JoinColumn(name="jobLocation_id")
-    private JobLocation jobLocation;
+    //private Collection<String> businessUnit;
 
     @ManyToOne
     @JoinColumn(name="employement_id")
     private Employment employment;
 
+    private String qualification;
+
     @ManyToOne
-    @JoinColumn(name="qualification_id")
-    private Qualification qualification;
+    @JoinColumn(name="team_id")
+    private Team project;
 
-    private String keyRequirementForPostion;
+    private String currency;
 
-    private String detailedJobDescription;
+    private String currencyType;
 
-    private double minExperience;
+    double budgetedSalaryMin;
 
-    private double maxExperience;
+    double budgetedSalaryMax;
 
-    @OneToOne
-    @JoinColumn(name="reportingManager_id")
-    private Employee reportingManager;
+    double projectDuration;
 
-    private String assetsRequired;
+    private String billability;
 
+    private String budgetScope;
 
-    /*//buddy name basically required
-    private ReferalBuddy referalBuddy;*/
+    private String newReplace;   //new or replacement
 
-    private String referalBuddyName;
+    private String travelReady;
+
+    private String passportReq;
+
+    private Integer numberOfOpenings;
+
+    private String nopJustification;   // number of opening justification
+
+    private String assetReq;
+
+    private String assetReqJustification;
+
+    private Date bdDate;
+
+    private String bdDateJustification;    // business date delivery justification
+
+    private String majorSkills;
+
+    private String minorSkills;
+
+    private String jDesc;
+
+    private String explvlMin; //experience level min
+
+    private String explvlMax; // experience level max
+
+    private String accessRequired;
+
+    private String hiringManager;
+
+    private String buddyName;
 
     //default ctor
     public MasterPage() {
@@ -149,6 +156,70 @@ public class MasterPage implements Serializable {
         this.designation = designation;
     }
 
+    public Employment getEmployment() {
+        return employment;
+    }
+
+    public void setEmployment(Employment employment) {
+        this.employment = employment;
+    }
+
+    public String getQualification() {
+        return qualification;
+    }
+
+    public void setQualification(String qualification) {
+        this.qualification = qualification;
+    }
+
+    public Team getProject() {
+        return project;
+    }
+
+    public void setProject(Team project) {
+        this.project = project;
+    }
+
+    public String getCurrency() {
+        return currency;
+    }
+
+    public void setCurrency(String currency) {
+        this.currency = currency;
+    }
+
+    public String getCurrencyType() {
+        return currencyType;
+    }
+
+    public void setCurrencyType(String currencyType) {
+        this.currencyType = currencyType;
+    }
+
+    public double getBudgetedSalaryMin() {
+        return budgetedSalaryMin;
+    }
+
+    public void setBudgetedSalaryMin(double budgetedSalaryMin) {
+        this.budgetedSalaryMin = budgetedSalaryMin;
+    }
+
+    public double getBudgetedSalaryMax() {
+        return budgetedSalaryMax;
+    }
+
+    public void setBudgetedSalaryMax(double budgetedSalaryMax) {
+        this.budgetedSalaryMax = budgetedSalaryMax;
+    }
+
+    public double getProjectDuration() {
+        return projectDuration;
+    }
+
+    public void setProjectDuration(double projectDuration) {
+        this.projectDuration = projectDuration;
+    }
+
     public String getBillability() {
         return billability;
     }
@@ -165,60 +236,28 @@ public class MasterPage implements Serializable {
         this.budgetScope = budgetScope;
     }
 
-    public String getBackFill() {
-        return backFill;
+    public String getNewReplace() {
+        return newReplace;
     }
 
-    public void setBackFill(String backFill) {
-        this.backFill = backFill;
+    public void setNewReplace(String newReplace) {
+        this.newReplace = newReplace;
     }
 
-    public Grade getGrade() {
-        return grade;
+    public String getTravelReady() {
+        return travelReady;
     }
 
-    public void setGrade(Grade grade) {
-        this.grade = grade;
+    public void setTravelReady(String travelReady) {
+        this.travelReady = travelReady;
     }
 
-    public String getSkillSet() {
-        return skillSet;
+    public String getPassportReq() {
+        return passportReq;
     }
 
-    public void setSkillSet(String skillSet) {
-        this.skillSet = skillSet;
-    }
-
-    public double getExpectedMinSalary() {
-        return expectedMinSalary;
-    }
-
-    public void setExpectedMinSalary(double expectedMinSalary) {
-        this.expectedMinSalary = expectedMinSalary;
-    }
-
-    public double getExpectedMaxSalary() {
-        return expectedMaxSalary;
-    }
-
-    public void setExpectedMaxSalary(double expectedMaxSalary) {
-        this.expectedMaxSalary = expectedMaxSalary;
-    }
-
-    public Date getBusinessDate() {
-        return businessDate;
-    }
-
-    public void setBusinessDate(Date businessDate) {
-        this.businessDate = businessDate;
-    }
-
-    public String getJustification() {
-        return justification;
-    }
-
-    public void setJustification(String justification) {
-        this.justification = justification;
+    public void setPassportReq(String passportReq) {
+        this.passportReq = passportReq;
     }
 
     public Integer getNumberOfOpenings() {
@@ -229,91 +268,107 @@ public class MasterPage implements Serializable {
         this.numberOfOpenings = numberOfOpenings;
     }
 
-    public Team getTeam() {
-        return team;
+    public String getNopJustification() {
+        return nopJustification;
     }
 
-    public void setTeam(Team team) {
-        this.team = team;
+    public void setNopJustification(String nopJustification) {
+        this.nopJustification = nopJustification;
     }
 
-    public void setJobLocation(JobLocation jobLocation) {
-        this.jobLocation = jobLocation;
+    public String getAssetReq() {
+        return assetReq;
     }
 
-    public Employment getEmployment() {
-        return employment;
+    public void setAssetReq(String assetReq) {
+        this.assetReq = assetReq;
     }
 
-    public void setEmployment(Employment employment) {
-        this.employment = employment;
+    public String getAssetReqJustification() {
+        return assetReqJustification;
     }
 
-    public Qualification getQualification() {
-        return qualification;
+    public void setAssetReqJustification(String assetReqJustification) {
+        this.assetReqJustification = assetReqJustification;
     }
 
-    public void setQualification(Qualification qualification) {
-        this.qualification = qualification;
+    public Date getBdDate() {
+        return bdDate;
     }
 
-    public String getKeyRequirementForPostion() {
-        return keyRequirementForPostion;
+    public void setBdDate(Date bdDate) {
+        this.bdDate = bdDate;
     }
 
-    public void setKeyRequirementForPostion(String keyRequirementForPostion) {
-        this.keyRequirementForPostion = keyRequirementForPostion;
+    public String getBdDateJustification() {
+        return bdDateJustification;
     }
 
-    public String getDetailedJobDescription() {
-        return detailedJobDescription;
+    public void setBdDateJustification(String bdDateJustification) {
+        this.bdDateJustification = bdDateJustification;
     }
 
-    public void setDetailedJobDescription(String detailedJobDescription) {
-        this.detailedJobDescription = detailedJobDescription;
+    public String getMajorSkills() {
+        return majorSkills;
     }
 
-    public double getMinExperience() {
-        return minExperience;
+    public void setMajorSkills(String majorSkills) {
+        this.majorSkills = majorSkills;
     }
 
-    public void setMinExperience(double minExperience) {
-        this.minExperience = minExperience;
+    public String getMinorSkills() {
+        return minorSkills;
     }
 
-    public double getMaxExperience() {
-        return maxExperience;
+    public void setMinorSkills(String minorSkills) {
+        this.minorSkills = minorSkills;
     }
 
-    public void setMaxExperience(double maxExperience) {
-        this.maxExperience = maxExperience;
+    public String getjDesc() {
+        return jDesc;
     }
 
-    public String getAssetsRequired() {
-        return assetsRequired;
+    public void setjDesc(String jDesc) {
+        this.jDesc = jDesc;
     }
 
-    public void setAssetsRequired(String assetsRequired) {
-        this.assetsRequired = assetsRequired;
+    public String getExplvlMin() {
+        return explvlMin;
     }
 
-    public String getReferalBuddyName() {
-        return referalBuddyName;
+    public void setExplvlMin(String explvlMin) {
+        this.explvlMin = explvlMin;
     }
 
-    public void setReferalBuddyName(String referalBuddyName) {
-        this.referalBuddyName = referalBuddyName;
+    public String getExplvlMax() {
+        return explvlMax;
     }
 
-    public JobLocation getJobLocation() {
-        return jobLocation;
+    public void setExplvlMax(String explvlMax) {
+        this.explvlMax = explvlMax;
     }
 
-    public Employee getReportingManager() {
-        return reportingManager;
+    public String getAccessRequired() {
+        return accessRequired;
     }
 
-    public void setReportingManager(Employee reportingManager) {
-        this.reportingManager = reportingManager;
+    public void setAccessRequired(String accessRequired) {
+        this.accessRequired = accessRequired;
+    }
+
+    public String getHiringManager() {
+        return hiringManager;
+    }
+
+    public void setHiringManager(String hiringManager) {
+        this.hiringManager = hiringManager;
+    }
+
+    public String getBuddyName() {
+        return buddyName;
+    }
+
+    public void setBuddyName(String buddyName) {
+        this.buddyName = buddyName;
     }
 }

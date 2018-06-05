@@ -5,6 +5,6 @@ import org.springframework.data.rest.core.config.Projection;
 
 @Projection(name = "employmentProjection" , types = Employment.class)
 public interface EmploymentProjection  {
+    String getId();
     String getCode();
-    String getType();
 }

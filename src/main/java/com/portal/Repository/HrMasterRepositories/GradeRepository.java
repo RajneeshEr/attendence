@@ -11,7 +11,7 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
  * email er.rajyd@gmamil.com
  * date 23/5/2018
  */
-@RepositoryRestResource(excerptProjection = GradeProjection.class)
+@RepositoryRestResource
 public interface GradeRepository extends CrudRepository<Grade, Long> {
     Grade findByName(String name);
     Grade findById(long id);

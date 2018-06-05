@@ -1,9 +1,15 @@
 package com.portal.Entity.CoreModel;
 
+import com.portal.Entity.Core.Team;
 import com.portal.Entity.HrMasters.Designation;
+import com.portal.Entity.HrMasters.Employment;
+import com.portal.Entity.HrMasters.Qualification;
 import lombok.Data;
 import org.springframework.stereotype.Component;
 
+import javax.persistence.FetchType;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import java.util.Date;
 
 /**
@@ -18,65 +24,65 @@ public class MasterPageModel {
 
     private long mrfNumber;
 
-    private long designation;
+    private long designationId;
+
+    //private Set<String> costCode;
+
+    //private Collection<String> businessUnit;
+
+    private long employmentId;
+
+    private String qualification;
+
+    private String currency;
+
+    private String currencyType;
+
+    private long projectId;  // table name team
+
+    double budgetedSalaryMin;
+
+    double budgetedSalaryMax;
+
+    double projectDuration;
 
     private String billability;
 
     private String budgetScope;
 
-    private String backFill;
+    private String newReplace;   //new or replacement
 
-    //private Set<String> costCode;
+    private String travelReady;
 
-    //Grade Entity Code
-    private long grade;
-
-    private String skillSet;
-
-    double expectedMinSalary;
-
-    double expectedMaxSalary;
-
-    private Date businessDate;        // current date
-
-    private String justification;
+    private String passportReq;
 
     private Integer numberOfOpenings;
 
-    //private Collection<String> businessEntityName;
+    private String nopJustification;   // number of opening justification
 
-    //Team Entity
-    private long team;
+    private String assetReq;
 
-    //always a kind of List or Collection (Type) require for @OneToMany
-    //Set<JobLocation> Entity
-    private long jobLocation;
+    private String assetReqJustification;
 
-    //Employment Entity
-    private long employment;
+    private Date bdDate;
 
-    //Qualification Entity
-    private long qualification;
+    private String bdDateJustification;    // business date delivery justification
 
-    private String keyRequirementForPostion;
+    private String majorSkills;
 
-    private String detailedJobDescription;
+    private String minorSkills;
 
-    private double minExperience;
+    private String jDesc;
 
-    private double maxExperience;
+    private String explvlMin; //experience level min
 
-    /*@OneToOne
-    private Collection<Employee> reportingManager;*/
+    private String explvlMax; // experience level max
 
-    private long reportingManager;
+    private String accessRequired;
 
-    private String assetsRequired;
+    private String hiringManager;
 
-    //buddy name basically required
-    //ReferalBuddy Entity
-    private String referalBuddyName;
-
+    private String buddyName;
 
     public long getId() {
         return id;
@@ -94,12 +100,60 @@ public class MasterPageModel {
         this.mrfNumber = mrfNumber;
     }
 
-    public long getDesignation() {
-        return designation;
+    public long getDesignationId() {
+        return designationId;
     }
 
-    public void setDesignation(long designation) {
-        this.designation = designation;
+    public void setDesignationId(long designationId) {
+        this.designationId = designationId;
+    }
+
+    public long getEmploymentId() {
+        return employmentId;
+    }
+
+    public void setEmploymentId(long employmentId) {
+        this.employmentId = employmentId;
+    }
+
+    public String getQualification() {
+        return qualification;
+    }
+
+    public void setQualification(String qualification) {
+        this.qualification = qualification;
+    }
+
+    public long getProjectId() {
+        return projectId;
+    }
+
+    public void setProjectId(long projectId) {
+        this.projectId = projectId;
+    }
+
+    public double getBudgetedSalaryMin() {
+        return budgetedSalaryMin;
+    }
+
+    public void setBudgetedSalaryMin(double budgetedSalaryMin) {
+        this.budgetedSalaryMin = budgetedSalaryMin;
+    }
+
+    public double getBudgetedSalaryMax() {
+        return budgetedSalaryMax;
+    }
+
+    public void setBudgetedSalaryMax(double budgetedSalaryMax) {
+        this.budgetedSalaryMax = budgetedSalaryMax;
+    }
+
+    public double getProjectDuration() {
+        return projectDuration;
+    }
+
+    public void setProjectDuration(double projectDuration) {
+        this.projectDuration = projectDuration;
     }
 
     public String getBillability() {
@@ -118,60 +172,28 @@ public class MasterPageModel {
         this.budgetScope = budgetScope;
     }
 
-    public String getBackFill() {
-        return backFill;
+    public String getNewReplace() {
+        return newReplace;
     }
 
-    public void setBackFill(String backFill) {
-        this.backFill = backFill;
+    public void setNewReplace(String newReplace) {
+        this.newReplace = newReplace;
     }
 
-    public long getGrade() {
-        return grade;
+    public String getTravelReady() {
+        return travelReady;
     }
 
-    public void setGrade(long grade) {
-        this.grade = grade;
+    public void setTravelReady(String travelReady) {
+        this.travelReady = travelReady;
     }
 
-    public String getSkillSet() {
-        return skillSet;
+    public String getPassportReq() {
+        return passportReq;
     }
 
-    public void setSkillSet(String skillSet) {
-        this.skillSet = skillSet;
-    }
-
-    public double getExpectedMinSalary() {
-        return expectedMinSalary;
-    }
-
-    public void setExpectedMinSalary(double expectedMinSalary) {
-        this.expectedMinSalary = expectedMinSalary;
-    }
-
-    public double getExpectedMaxSalary() {
-        return expectedMaxSalary;
-    }
-
-    public void setExpectedMaxSalary(double expectedMaxSalary) {
-        this.expectedMaxSalary = expectedMaxSalary;
-    }
-
-    public Date getBusinessDate() {
-        return businessDate;
-    }
-
-    public void setBusinessDate(Date businessDate) {
-        this.businessDate = businessDate;
-    }
-
-    public String getJustification() {
-        return justification;
-    }
-
-    public void setJustification(String justification) {
-        this.justification = justification;
+    public void setPassportReq(String passportReq) {
+        this.passportReq = passportReq;
     }
 
     public Integer getNumberOfOpenings() {
@@ -182,91 +204,123 @@ public class MasterPageModel {
         this.numberOfOpenings = numberOfOpenings;
     }
 
-    public long getTeam() {
-        return team;
+    public String getNopJustification() {
+        return nopJustification;
     }
 
-    public void setTeam(long team) {
-        this.team = team;
+    public void setNopJustification(String nopJustification) {
+        this.nopJustification = nopJustification;
     }
 
-    public long getJobLocation() {
-        return jobLocation;
+    public String getAssetReq() {
+        return assetReq;
     }
 
-    public void setJobLocation(long jobLocation) {
-        this.jobLocation = jobLocation;
+    public void setAssetReq(String assetReq) {
+        this.assetReq = assetReq;
     }
 
-    public long getEmployment() {
-        return employment;
+    public String getAssetReqJustification() {
+        return assetReqJustification;
     }
 
-    public void setEmployment(long employment) {
-        this.employment = employment;
+    public void setAssetReqJustification(String assetReqJustification) {
+        this.assetReqJustification = assetReqJustification;
     }
 
-    public long getQualification() {
-        return qualification;
+    public Date getBdDate() {
+        return bdDate;
     }
 
-    public void setQualification(long qualification) {
-        this.qualification = qualification;
+    public void setBdDate(Date bdDate) {
+        this.bdDate = bdDate;
     }
 
-    public String getKeyRequirementForPostion() {
-        return keyRequirementForPostion;
+    public String getBdDateJustification() {
+        return bdDateJustification;
     }
 
-    public void setKeyRequirementForPostion(String keyRequirementForPostion) {
-        this.keyRequirementForPostion = keyRequirementForPostion;
+    public void setBdDateJustification(String bdDateJustification) {
+        this.bdDateJustification = bdDateJustification;
     }
 
-    public String getDetailedJobDescription() {
-        return detailedJobDescription;
+    public String getMajorSkills() {
+        return majorSkills;
     }
 
-    public void setDetailedJobDescription(String detailedJobDescription) {
-        this.detailedJobDescription = detailedJobDescription;
+    public void setMajorSkills(String majorSkills) {
+        this.majorSkills = majorSkills;
     }
 
-    public double getMinExperience() {
-        return minExperience;
+    public String getMinorSkills() {
+        return minorSkills;
     }
 
-    public void setMinExperience(double minExperience) {
-        this.minExperience = minExperience;
+    public void setMinorSkills(String minorSkills) {
+        this.minorSkills = minorSkills;
     }
 
-    public double getMaxExperience() {
-        return maxExperience;
+    public String getjDesc() {
+        return jDesc;
     }
 
-    public void setMaxExperience(double maxExperience) {
-        this.maxExperience = maxExperience;
+    public void setjDesc(String jDesc) {
+        this.jDesc = jDesc;
     }
 
-    public long getReportingManager() {
-        return reportingManager;
+    public String getExplvlMin() {
+        return explvlMin;
     }
 
-    public void setReportingManager(long reportingManager) {
-        this.reportingManager = reportingManager;
+    public void setExplvlMin(String explvlMin) {
+        this.explvlMin = explvlMin;
     }
 
-    public String getAssetsRequired() {
-        return assetsRequired;
+    public String getExplvlMax() {
+        return explvlMax;
     }
 
-    public void setAssetsRequired(String assetsRequired) {
-        this.assetsRequired = assetsRequired;
+    public void setExplvlMax(String explvlMax) {
+        this.explvlMax = explvlMax;
     }
 
-    public String getReferalBuddyName() {
-        return referalBuddyName;
+    public String getAccessRequired() {
+        return accessRequired;
     }
 
-    public void setReferalBuddyName(String referalBuddyName) {
-        this.referalBuddyName = referalBuddyName;
+    public void setAccessRequired(String accessRequired) {
+        this.accessRequired = accessRequired;
+    }
+
+    public String getHiringManager() {
+        return hiringManager;
+    }
+
+    public void setHiringManager(String hiringManager) {
+        this.hiringManager = hiringManager;
+    }
+
+    public String getBuddyName() {
+        return buddyName;
+    }
+
+    public void setBuddyName(String buddyName) {
+        this.buddyName = buddyName;
+    }
+
+    public String getCurrency() {
+        return currency;
+    }
+
+    public void setCurrency(String currency) {
+        this.currency = currency;
+    }
+
+    public String getCurrencyType() {
+        return currencyType;
+    }
+
+    public void setCurrencyType(String currencyType) {
+        this.currencyType = currencyType;
     }
 }

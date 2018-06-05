@@ -23,8 +23,10 @@ public class Employment implements Serializable {
 
     @Column(unique = true)
     private String code;
+
     private String type;
-    @OneToMany @JsonIgnore
+
+    @OneToMany 
     private Set<Employee> employee;
 
     public Employment() {

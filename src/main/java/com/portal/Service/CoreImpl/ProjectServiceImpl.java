@@ -1,11 +1,10 @@
 package com.portal.Service.CoreImpl;
 
 import com.portal.CommonConstant.CommonConstant;
-import com.portal.Entity.Core.Team;
-import com.portal.Repository.CoreRepository.TeamRepository;
-import com.portal.Service.Core.TeamService;
+import com.portal.Entity.Core.Project;
+import com.portal.Repository.CoreRepository.ProjectRepository;
+import com.portal.Service.Core.ProjectService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -16,15 +15,15 @@ import java.util.List;
  * date 23/5/2018
  */
 @Service
-public class TeamServiceImpl implements CommonConstant,TeamService {
+public class ProjectServiceImpl implements CommonConstant,ProjectService {
 
     @Autowired
-    private TeamRepository teamRepository;
+    private ProjectRepository teamRepository;
 
     @Override
-    public Team save(Team team){
+    public Project save(Project project){
         try{
-            return teamRepository.save(team);
+            return teamRepository.save(project);
         }catch (Exception e){
             e.printStackTrace();
             return null;
@@ -32,7 +31,7 @@ public class TeamServiceImpl implements CommonConstant,TeamService {
     }
 
     @Override
-    public List<Team> findListOfTeamByName(String name){
+    public List<Project> findByName(String name){
         try{
             return teamRepository.findByName(name);
         }catch (Exception e){
@@ -52,7 +51,7 @@ public class TeamServiceImpl implements CommonConstant,TeamService {
     }
 
     @Override
-    public Team findById(long id){
+    public Project findById(long id){
          try {
              return teamRepository.findById(id);
          } catch (Exception e) {
@@ -62,7 +61,7 @@ public class TeamServiceImpl implements CommonConstant,TeamService {
     }
 
     @Override
-    public String delete(Team object){
+    public String delete(Project object){
         try {
             teamRepository.delete(object);
             return DELETE;

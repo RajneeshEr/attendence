@@ -1,9 +1,9 @@
 package com.portal.Resource.ResourceCoreImpl;
 
 import com.portal.CommonConstant.CommonConstant;
-import com.portal.Entity.Core.Team;
-import com.portal.Resource.ResourceCore.TeamResource;
-import com.portal.Service.Core.TeamService;
+import com.portal.Entity.Core.Project;
+import com.portal.Resource.ResourceCore.ProjectResource;
+import com.portal.Service.Core.ProjectService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -13,14 +13,14 @@ import org.springframework.web.bind.annotation.*;
  * date 23/5/2018
  */
 @RestController
-public class TeamResourceImpl implements CommonConstant,TeamResource {
+public class ProjectResourceImpl implements CommonConstant,ProjectResource {
 
     @Autowired
-    private TeamService teamService;
+    private ProjectService teamService;
 
     @Override
-    public String save(@RequestBody Team team){
-        if (teamService.save(team) !=null){
+    public String save(@RequestBody Project project){
+        if (teamService.save(project) !=null){
             return SAVE;
         }else{
             return NOT_SAVE;
@@ -28,7 +28,7 @@ public class TeamResourceImpl implements CommonConstant,TeamResource {
     }
 
     @Override
-    public Team getTeamByid(@PathVariable("id") long id){
+    public Project getTeamByid(@PathVariable("id") long id){
         return teamService.findById(id);
     }
 

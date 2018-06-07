@@ -1,15 +1,8 @@
 package com.portal.Entity.CoreModel;
 
-import com.portal.Entity.Core.Team;
-import com.portal.Entity.HrMasters.Designation;
-import com.portal.Entity.HrMasters.Employment;
-import com.portal.Entity.HrMasters.Qualification;
 import lombok.Data;
 import org.springframework.stereotype.Component;
 
-import javax.persistence.FetchType;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import java.util.Date;
 
 /**

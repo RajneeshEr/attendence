@@ -1,6 +1,6 @@
 package com.portal.Entity.CoreProjections;
 
-import com.portal.Entity.Core.Team;
+import com.portal.Entity.Core.Project;
 import org.springframework.data.rest.core.config.Projection;
 
 /**
@@ -8,9 +8,9 @@ import org.springframework.data.rest.core.config.Projection;
  * email er.rajyd@gmamil.com
  * date 03/6/2018
  */
-@Projection(name = "teamProjection", types = Team.class)
-public interface TeamProjection {
-    String getId();
+@Projection(name = "projectProjection", types = Project.class)
+public interface ProjectProjection {
+    long getId();
     String getCode();
 
 }

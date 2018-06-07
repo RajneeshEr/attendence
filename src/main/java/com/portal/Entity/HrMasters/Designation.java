@@ -25,6 +25,8 @@ public class Designation implements Serializable {
 
     private String name; // mandatory field
 
+    @OneToOne
+    @JoinColumn(name = "StaffType_id")
     private StaffType staffType;
 
     private String bandLevel;

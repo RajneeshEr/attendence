@@ -23,6 +23,7 @@ public class StaffType implements Serializable {
     @Column(unique = true)
     private String code;
     private String name;
+
     @OneToMany @JsonIgnore
     private Set<Employee> employee;
 

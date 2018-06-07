@@ -19,18 +19,9 @@ public class DesignationServiceImpl implements CommonConstant,DesignationService
     @Autowired
     private DesignationRepository designationRepository;
 
-    public boolean findByIdGiven(long id){
-        try{
-            return designationRepository.existsById(id);
-        }catch (Exception e ){
-            e.printStackTrace();
-            return false;
-        }
-    }
-
     public Designation findById(long id){
         try{
-            return designationRepository.findById(id);
+            return null;
         }catch (Exception e ){
             e.printStackTrace();
             return null;

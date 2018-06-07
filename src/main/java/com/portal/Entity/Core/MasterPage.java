@@ -4,17 +4,12 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.portal.Entity.CoreModel.MasterPageModel;
 import com.portal.Entity.HrMasters.Designation;
 import com.portal.Entity.HrMasters.Employment;
-import com.portal.Entity.HrMasters.Grade;
-import com.portal.Entity.HrMasters.Qualification;
-import jdk.nashorn.internal.ir.annotations.Ignore;
 import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
-import org.springframework.stereotype.Service;
 
 import java.io.Serializable;
 import java.util.Date;
-import java.util.Set;
 
 import javax.persistence.*;
 
@@ -25,7 +20,6 @@ import javax.persistence.*;
  */
 @Entity
 @Data
-@Getter @Setter
 public class MasterPage implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -78,7 +72,7 @@ public class MasterPage implements Serializable {
 
     @ManyToOne
     @JoinColumn(name="team_id")
-    private Team project;
+    private Project project;
 
     private String currency;
 
@@ -172,11 +166,11 @@ public class MasterPage implements Serializable {
         this.qualification = qualification;
     }
 
-    public Team getProject() {
+    public Project getProject() {
         return project;
     }
 
-    public void setProject(Team project) {
+    public void setProject(Project project) {
         this.project = project;
     }
 

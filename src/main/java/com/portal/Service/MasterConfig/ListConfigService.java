@@ -13,6 +13,10 @@ import java.util.List;
  * date 31/5/2018
  */
 @Service
-public interface ListConfig {
+public interface ListConfigService {
     HashMap configListingOfMaster();
+    HashMap findBusinessUnit();
+    HashMap findAllProjectByBusinessUnit(long busiUnitId);
+    HashMap findAllLocationByProject(long projectId);
+    HashMap findAllCityByLocation(long locationId);
 }

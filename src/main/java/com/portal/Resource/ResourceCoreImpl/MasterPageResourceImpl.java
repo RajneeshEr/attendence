@@ -21,7 +21,7 @@ public class MasterPageResourceImpl implements CommonConstant,MasterPageResource
     private MasterPageService masterPageService;
 
     @Autowired
-    ApplicationResponse applicationResponse;
+    private ApplicationResponse applicationResponse;
 
     //private Mapper mapper;
 

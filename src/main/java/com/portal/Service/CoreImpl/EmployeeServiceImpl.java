@@ -4,14 +4,14 @@ import com.portal.CommonConstant.CommonConstant;
 import com.portal.Entity.Core.Employee;
 import com.portal.Repository.CoreRepository.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 /**
  * @author rajneesh yadav
  * email er.rajyd@gmamil.com
  * date 23/5/2018
  */
-@Component
+@Service
 public class EmployeeServiceImpl implements CommonConstant {
 
     @Autowired

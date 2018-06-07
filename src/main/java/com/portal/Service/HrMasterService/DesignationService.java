@@ -11,7 +11,6 @@ import org.springframework.stereotype.Service;
 @Service
 public interface DesignationService {
 
-    boolean findByIdGiven(long id);
     Designation findById(long id);
 
     // this method will work for save or update object

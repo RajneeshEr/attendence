@@ -3,14 +3,12 @@ package com.portal.Service.CoreImpl;
 import com.portal.CommonConstant.CommonConstant;
 import com.portal.Entity.Core.MasterPage;
 import com.portal.Entity.CoreModel.MasterPageModel;
-import com.portal.Repository.CoreRepository.EmployeeRepository;
 import com.portal.Repository.HrMasterRepositories.DesignationRepository;
 import com.portal.Repository.HrMasterRepositories.EmploymentRepository;
-import com.portal.Repository.HrMasterRepositories.GradeRepository;
 import com.portal.Repository.HrMasterRepositories.QualificationRepository;
-import com.portal.Repository.CoreRepository.JobLocationRepository;
+import com.portal.Repository.CoreRepository.LocationRepository;
 import com.portal.Repository.CoreRepository.MasterPageRepository;
-import com.portal.Repository.CoreRepository.TeamRepository;
+import com.portal.Repository.CoreRepository.ProjectRepository;
 import com.portal.Service.Core.MasterPageService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -30,10 +28,10 @@ public class MasterPageServiceImpl implements CommonConstant,MasterPageService {
     private DesignationRepository designationRepository;
 
     @Autowired
-    private TeamRepository teamRepository;
+    private ProjectRepository teamRepository;
 
     @Autowired
-    private JobLocationRepository jobLocationRepository;
+    private LocationRepository locationRepository;
 
     @Autowired
     EmploymentRepository employmentRepository;
@@ -68,7 +66,6 @@ public class MasterPageServiceImpl implements CommonConstant,MasterPageService {
                 masterPage.setDesignation(designationRepository.findById(desiId));
             }else { masterPage.setDesignation(null);}
         }else { masterPage.setDesignation(null);}
-
 
         //master page team
         if (teamId>0) {

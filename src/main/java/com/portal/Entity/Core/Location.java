@@ -1,6 +1,5 @@
 package com.portal.Entity.Core;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -17,17 +16,24 @@ import javax.persistence.*;
 @Entity
 @Getter
 @Setter
-public class JobLocation implements Serializable {
+public class Location implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     long id;
 
-    private String jobLocationName;
+    private String code;
+    private String name;
+
+    @ManyToOne(fetch = FetchType.EAGER)
+    private Project project;
+
+    @OneToMany(mappedBy = "location",fetch = FetchType.EAGER)
+    private Set<City> cities;
 
     /*@OneToMany
     private Set<MasterPage> masterPage;
 */
-    public JobLocation() {
+    public Location() {
     }
 
 }

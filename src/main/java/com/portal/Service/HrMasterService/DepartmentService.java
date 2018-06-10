@@ -13,8 +13,6 @@ public interface DepartmentService {
     //this method will work for save or update object
     Department save(Department department);
 
-    boolean findByIdGiven(long id);
-
     Department findById(long id);
 
     Department findByCode(String code);

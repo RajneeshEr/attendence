@@ -15,7 +15,6 @@ import javax.persistence.*;
  * date 21/5/2018
  */
 @Entity
-@Data
 public class Grade implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

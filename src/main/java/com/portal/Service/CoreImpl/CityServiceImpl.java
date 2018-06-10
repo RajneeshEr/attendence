@@ -18,6 +18,16 @@ public class CityServiceImpl implements CityService {
     private CityRepository cityRepository;
 
     @Override
+    public City save(City city){
+        try {
+            return cityRepository.save(city);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    @Override
     public City findById(long id) {
         try {
             return cityRepository.findById(id);

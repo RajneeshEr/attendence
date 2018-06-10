@@ -14,7 +14,7 @@ public interface MasterPageResource {
 
     @PostMapping("/saveMasterPage")
     @CrossOrigin
-    String saveMasterPage(@RequestBody MasterPageModel masterPageModel);
+    boolean saveMasterPage(@RequestBody MasterPageModel masterPageModel);
 
     @GetMapping("/findMaster/{id}")
     @CrossOrigin

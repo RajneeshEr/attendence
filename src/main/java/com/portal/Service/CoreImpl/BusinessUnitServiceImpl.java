@@ -14,10 +14,8 @@ import org.springframework.stereotype.Service;
 @Service
 public class BusinessUnitServiceImpl implements BusinessUnitService{
 
-
     @Autowired
     private BusinessUnitRepository businessUnitRepository;
-
 
     /*@Override
     public BusinessUnit save(EntityModel entityModel) {

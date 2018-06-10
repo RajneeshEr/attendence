@@ -16,4 +16,5 @@ public interface ListConfigService {
     HashMap findAllProjectByBusinessUnit(long busiUnitId);
     HashMap findAllLocationByProject(long projectId);
     HashMap findAllCityByLocation(long locationId);
+    HashMap findAllCostCenterByCity(long cityId);
 }

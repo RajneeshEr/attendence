@@ -1,6 +1,5 @@
 package com.portal.Entity.CoreModel;
 
-import lombok.Data;
 import org.springframework.stereotype.Component;
 
 import java.util.Date;
@@ -11,7 +10,6 @@ import java.util.Date;
  * date 28/5/2018
  */
 @Component
-@Data
 public class MasterPageModel {
     long id;
 
@@ -21,7 +19,7 @@ public class MasterPageModel {
 
     //private Set<String> costCode;
 
-    //private Collection<String> businessUnit;
+    private long businessUnitId;
 
     private long employmentId;
 
@@ -31,7 +29,13 @@ public class MasterPageModel {
 
     private String currencyType;
 
-    private long projectId;  // table name team
+    private long projectId;
+
+    private long locationId;
+
+    private long cityId;
+
+    private long costCenterId;
 
     double budgetedSalaryMin;
 
@@ -315,5 +319,37 @@ public class MasterPageModel {
 
     public void setCurrencyType(String currencyType) {
         this.currencyType = currencyType;
+    }
+
+    public long getBusinessUnitId() {
+        return businessUnitId;
+    }
+
+    public void setBusinessUnitId(long businessUnitId) {
+        this.businessUnitId = businessUnitId;
+    }
+
+    public long getLocationId() {
+        return locationId;
+    }
+
+    public void setLocationId(long locationId) {
+        this.locationId = locationId;
+    }
+
+    public long getCityId() {
+        return cityId;
+    }
+
+    public void setCityId(long cityId) {
+        this.cityId = cityId;
+    }
+
+    public long getCostCenterId() {
+        return costCenterId;
+    }
+
+    public void setCostCenterId(long costCenterId) {
+        this.costCenterId = costCenterId;
     }
 }

@@ -1,33 +1,26 @@
-package com.portal.Entity.Core;
+package com.portal.Entity.CoreModel;
 
-import java.io.Serializable;
-import java.util.Set;
-
-import lombok.Data;
-
-import javax.persistence.*;
+import com.portal.Entity.Core.CostCenter;
+import com.portal.Entity.Core.Location;
+import org.springframework.stereotype.Component;
 
 /**
  * @author rajneesh yadav
  * email er.rajyd@gmamil.com
  * date 06/6/2018
  */
-@Entity
-public class City implements Serializable {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+@Component
+public class CityModel {
     long id;
-
     private String code;
     private String name;
 
-    @ManyToOne(fetch = FetchType.EAGER)
     private Location location;
 
-    @OneToMany
-    private Set<CostCenter> costCenters;
+    private CostCenter costCenter;
 
-    public City() {
+    public CityModel() {
+
     }
 
     public long getId() {
@@ -62,11 +55,12 @@ public class City implements Serializable {
         this.location = location;
     }
 
-    public Set<CostCenter> getCostCenters() {
-        return costCenters;
+    public CostCenter getCostCenter() {
+        return costCenter;
     }
 
-    public void setCostCenters(Set<CostCenter> costCenters) {
-        this.costCenters = costCenters;
+    public void setCostCenter(CostCenter costCenter) {
+        this.costCenter = costCenter;
     }
+
 }

@@ -14,7 +14,7 @@ import java.util.HashMap;
  */
 @RequestMapping("/rest/config")
 public interface MasterConfig {
-    @GetMapping(value = "/findAllDesiEmplmentConfig",produces = "application/json")
+    @GetMapping(value = "/findAllConfig",produces = "application/json")
     @CrossOrigin
     HashMap findAllConfigDetails();
 
@@ -34,5 +34,7 @@ public interface MasterConfig {
     @CrossOrigin
     HashMap findAllCityByLocation(long locationId);
 
-
+    @GetMapping(value = "/findAllCostCenterConfig",produces = "application/json")
+    @CrossOrigin
+    HashMap findAllCostCenterByCity(long cityId);
 }

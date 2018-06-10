@@ -1,9 +1,8 @@
 package com.portal.Service.MasterConfigImpl;
 
-import com.portal.Repository.CoreRepository.BusinessUnitRepository;
-import com.portal.Repository.CoreRepository.CityRepository;
-import com.portal.Repository.CoreRepository.LocationRepository;
-import com.portal.Repository.CoreRepository.ProjectRepository;
+import com.portal.Entity.Core.BusinessUnit;
+import com.portal.Entity.Core.CostCenter;
+import com.portal.Repository.CoreRepository.*;
 import com.portal.Repository.HrMasterRepositories.DesignationRepository;
 import com.portal.Repository.HrMasterRepositories.EmploymentRepository;
 import com.portal.Service.MasterConfig.ListConfigService;
@@ -38,12 +37,16 @@ public class ListConfigServiceImpl implements ListConfigService {
     @Autowired
     private CityRepository cityRepository;
 
+    @Autowired
+    private CostCenterRepository costCenterRepository;
+
     @Override
     public HashMap configListingOfMaster(){
         HashMap desiEmplmntcoll= new HashMap();
         try {
-            desiEmplmntcoll.put("designation",designationRepository.findAllProjectedBy()); // index 1 designation with id and code
-            desiEmplmntcoll.put("employment",employmentRepository.findAllProjectedBy()); // index 2 designation with id and code
+            desiEmplmntcoll.put("designation",designationRepository.findAllProjectedBy());
+            desiEmplmntcoll.put("employment",employmentRepository.findAllProjectedBy());
+            desiEmplmntcoll.put("businessUnit",businessUnitRepository.findAllProjectedBy());
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -54,7 +57,7 @@ public class ListConfigServiceImpl implements ListConfigService {
     public HashMap findBusinessUnit() {
         HashMap busiUnitColl= new HashMap();
         try {
-            busiUnitColl.put("businessUnit",businessUnitRepository.findAllProjectedBy()); // index 0 project with id and code
+            busiUnitColl.put("businessUnit",businessUnitRepository.findAllProjectedBy());
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -64,8 +67,10 @@ public class ListConfigServiceImpl implements ListConfigService {
     @Override
     public HashMap findAllProjectByBusinessUnit(long busiUnitId) {
         HashMap projectColl= new HashMap();
+        BusinessUnit businessUnit=null;
+        businessUnit = businessUnitRepository.findById(busiUnitId);
         try {
-            projectColl.put("project",projectRepository.findByBusinessUnit(busiUnitId)); // index 0 project with id and code
+            projectColl.put("project",projectRepository.findByBusinessUnitId(busiUnitId));
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -76,7 +81,7 @@ public class ListConfigServiceImpl implements ListConfigService {
     public HashMap findAllLocationByProject(long projectId) {
         HashMap locationColl= new HashMap();
         try {
-            locationColl.put("location",locationRepository.findByProject(projectId)); // index 0 project with id and code
+            locationColl.put("location",locationRepository.findByProjectId(projectId));
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -87,10 +92,22 @@ public class ListConfigServiceImpl implements ListConfigService {
     public HashMap findAllCityByLocation(long locationId) {
         HashMap cityColl= new HashMap();
         try {
-            cityColl.put("city",cityRepository.findByLocation(locationId)); // index 0 project with id and code
+            cityColl.put("city",cityRepository.findByLocationId(locationId)); // index 0 project with id and code
         } catch (Exception e) {
             e.printStackTrace();
         }
         return cityColl;
     }
+
+    @Override
+    public HashMap findAllCostCenterByCity(long cityId) {
+        HashMap cityColl= new HashMap();
+        try {
+            cityColl.put("costCenter",costCenterRepository.findByCityId(cityId)); // index 0 project with id and code
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return cityColl;
+    }
+
 }

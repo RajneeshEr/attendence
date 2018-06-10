@@ -1,6 +1,5 @@
 package com.portal.Entity.Core;
 
-import lombok.Data;
 import java.io.Serializable;
 import java.util.Set;
 
@@ -12,7 +11,6 @@ import javax.persistence.*;
  * date 06/6/2018
  */
 @Entity
-@Data
 public class BusinessUnit implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -21,10 +19,16 @@ public class BusinessUnit implements Serializable {
     private String code;
     private String name;
 
-    @OneToMany(mappedBy = "businessUnit",fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "businessUnit",cascade = CascadeType.ALL)
     private Set<Project> project;
 
     public BusinessUnit() {
+    }
+
+    public BusinessUnit(String code, String name, Set<Project> project) {
+        this.code = code;
+        this.name = name;
+        this.project = project;
     }
 
     public long getId() {
@@ -50,7 +54,6 @@ public class BusinessUnit implements Serializable {
     public void setName(String name) {
         this.name = name;
     }
-
     public Set<Project> getProject() {
         return project;
     }
@@ -58,4 +61,5 @@ public class BusinessUnit implements Serializable {
     public void setProject(Set<Project> project) {
         this.project = project;
     }
+
 }

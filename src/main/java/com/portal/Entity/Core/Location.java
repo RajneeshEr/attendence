@@ -27,13 +27,52 @@ public class Location implements Serializable {
     @ManyToOne(fetch = FetchType.EAGER)
     private Project project;
 
-    @OneToMany(mappedBy = "location",fetch = FetchType.EAGER)
+    @OneToMany(fetch = FetchType.EAGER)
     private Set<City> cities;
 
-    /*@OneToMany
+    @OneToMany
     private Set<MasterPage> masterPage;
-*/
+
     public Location() {
     }
 
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public String getCode() {
+        return code;
+    }
+
+    public void setCode(String code) {
+        this.code = code;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Project getProject() {
+        return project;
+    }
+
+    public void setProject(Project project) {
+        this.project = project;
+    }
+
+    public Set<City> getCities() {
+        return cities;
+    }
+
+    public void setCities(Set<City> cities) {
+        this.cities = cities;
+    }
 }

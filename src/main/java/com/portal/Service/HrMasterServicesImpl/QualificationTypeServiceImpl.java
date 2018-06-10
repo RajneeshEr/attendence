@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
  * email er.rajyd@gmamil.com
  * date 24/5/2018
  */
-@Component
+@Service
 public class QualificationTypeServiceImpl implements CommonConstant,QualificationTypeService {
 
     @Autowired

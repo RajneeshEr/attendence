@@ -10,6 +10,7 @@ import lombok.Setter;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.Set;
 
 import javax.persistence.*;
 
@@ -19,7 +20,6 @@ import javax.persistence.*;
  * date 21/5/2018
  */
 @Entity
-@Data
 public class MasterPage implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -62,7 +62,9 @@ public class MasterPage implements Serializable {
 
     //private Set<String> costCode;
 
-    //private Collection<String> businessUnit;
+    @ManyToOne
+    @JoinColumn(name = "businessUnit_id")
+    private BusinessUnit businessUnit;
 
     @ManyToOne
     @JoinColumn(name="employement_id")
@@ -71,8 +73,20 @@ public class MasterPage implements Serializable {
     private String qualification;
 
     @ManyToOne
-    @JoinColumn(name="team_id")
+    @JoinColumn(name="project_id")
     private Project project;
+
+    @ManyToOne
+    @JoinColumn(name="location_id")
+    private Location location;
+
+    @ManyToOne
+    @JoinColumn(name="city_id")
+    private City city;
+
+    @ManyToOne
+    @JoinColumn(name="costCenter_id")
+    private CostCenter costCenter;
 
     private String currency;
 
@@ -364,5 +378,37 @@ public class MasterPage implements Serializable {
 
     public void setBuddyName(String buddyName) {
         this.buddyName = buddyName;
+    }
+
+    public BusinessUnit getBusinessUnit() {
+        return businessUnit;
+    }
+
+    public void setBusinessUnit(BusinessUnit businessUnit) {
+        this.businessUnit = businessUnit;
+    }
+
+    public Location getLocation() {
+        return location;
+    }
+
+    public void setLocation(Location location) {
+        this.location = location;
+    }
+
+    public City getCity() {
+        return city;
+    }
+
+    public void setCity(City city) {
+        this.city = city;
+    }
+
+    public CostCenter getCostCenter() {
+        return costCenter;
+    }
+
+    public void setCostCenter(CostCenter costCenter) {
+        this.costCenter = costCenter;
     }
 }

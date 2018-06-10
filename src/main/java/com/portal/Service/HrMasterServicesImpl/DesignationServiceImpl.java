@@ -13,7 +13,7 @@ import org.springframework.stereotype.Service;
  * email er.rajyd@gmamil.com
  * date 23/5/2018
  */
-@Component
+@Service
 public class DesignationServiceImpl implements CommonConstant,DesignationService {
 
     @Autowired

@@ -1,14 +1,13 @@
 package com.portal.Service.CoreImpl;
 
 import com.portal.CommonConstant.CommonConstant;
+import com.portal.Entity.Core.City;
 import com.portal.Entity.Core.MasterPage;
 import com.portal.Entity.CoreModel.MasterPageModel;
+import com.portal.Repository.CoreRepository.*;
 import com.portal.Repository.HrMasterRepositories.DesignationRepository;
 import com.portal.Repository.HrMasterRepositories.EmploymentRepository;
 import com.portal.Repository.HrMasterRepositories.QualificationRepository;
-import com.portal.Repository.CoreRepository.LocationRepository;
-import com.portal.Repository.CoreRepository.MasterPageRepository;
-import com.portal.Repository.CoreRepository.ProjectRepository;
 import com.portal.Service.Core.MasterPageService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -28,17 +27,25 @@ public class MasterPageServiceImpl implements CommonConstant,MasterPageService {
     private DesignationRepository designationRepository;
 
     @Autowired
-    private ProjectRepository teamRepository;
+    private ProjectRepository projectRepository;
 
     @Autowired
     private LocationRepository locationRepository;
 
     @Autowired
-    EmploymentRepository employmentRepository;
+    private EmploymentRepository employmentRepository;
 
     @Autowired
     private QualificationRepository qualificationRepository;
 
+    @Autowired
+    private BusinessUnitRepository businessUnitRepository;
+
+    @Autowired
+    private CityRepository cityRepository;
+
+    @Autowired
+    private CostCenterRepository costCenterRepository;
 
     //this method will work for save or update object
     public MasterPage save(MasterPageModel masterPageModel){
@@ -55,10 +62,12 @@ public class MasterPageServiceImpl implements CommonConstant,MasterPageService {
     public MasterPage convertModelToEntity(MasterPageModel masterPageModel){
         MasterPage masterPage=new MasterPage(masterPageModel);
         long desiId=masterPageModel.getDesignationId();
-        //long gradeId=masterPageModel.getGradeId();  // this is not required replace with band
-        long teamId=masterPageModel.getProjectId();  // project Id is team id
-        //long jobLocId=masterPageModel.getJobLocation();
         long employmentId=masterPageModel.getEmploymentId();
+        long busiUnitId=masterPageModel.getBusinessUnitId();
+        long projectId=masterPageModel.getProjectId();  // project Id is team id
+        long locationId=masterPageModel.getLocationId();
+        long cityId=masterPageModel.getCityId();
+        long costCenterId=masterPageModel.getCostCenterId();
 
         //master page designation
         if(desiId>0){
@@ -67,12 +76,33 @@ public class MasterPageServiceImpl implements CommonConstant,MasterPageService {
             }else { masterPage.setDesignation(null);}
         }else { masterPage.setDesignation(null);}
 
-        //master page team
-        if (teamId>0) {
-            if (teamRepository.existsById(teamId)) {
-                masterPage.setProject(teamRepository.findById(teamId));
+        //master page businessUnit
+        if (busiUnitId>0) {
+            if (businessUnitRepository.existsById(busiUnitId)) {
+                masterPage.setBusinessUnit(businessUnitRepository.findById(busiUnitId));
+            } else { masterPage.setBusinessUnit(null); }
+        }else{ masterPage.setBusinessUnit(null);}
+
+        //master page project
+        if (projectId>0) {
+            if (projectRepository.existsById(projectId)) {
+                masterPage.setProject(projectRepository.findById(projectId));
             } else { masterPage.setProject(null); }
         }else{ masterPage.setProject(null);}
+
+        //master page location
+        if (locationId>0) {
+            if (locationRepository.existsById(locationId)) {
+                masterPage.setLocation(locationRepository.findById(locationId));
+            } else { masterPage.setLocation(null); }
+        }else{ masterPage.setLocation(null);}
+
+        //master page city
+        if (cityId>0) {
+            if (cityRepository.existsById(cityId)) {
+                masterPage.setCity(cityRepository.findById(cityId));
+            } else { masterPage.setCity(null); }
+        }else{ masterPage.setCity(null);}
 
         //master page employment
         if (employmentId>0) {
@@ -80,6 +110,13 @@ public class MasterPageServiceImpl implements CommonConstant,MasterPageService {
                 masterPage.setEmployment(employmentRepository.findById(employmentId));
             } else { masterPage.setEmployment(null); }
         }else{ masterPage.setEmployment(null);}
+
+        //master page employment
+        if (costCenterId>0) {
+            if (costCenterRepository.existsById(costCenterId)) {
+                masterPage.setCostCenter(costCenterRepository.findById(costCenterId));
+            } else { masterPage.setCostCenter(null); }
+        }else{ masterPage.setCostCenter(null);}
 
         return masterPage;
     }

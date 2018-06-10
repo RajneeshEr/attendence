@@ -13,5 +13,4 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 public interface DepartmentRepository extends CrudRepository<Department, Long> {
     Department findByCode(String code);
     Department findById(long id);
-
 }

@@ -1,8 +1,6 @@
 package com.portal.Entity.HrMasters;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.portal.Entity.Core.Employee;
-import lombok.Data;
 
 import java.io.Serializable;
 import java.util.Set;
@@ -15,7 +13,6 @@ import javax.persistence.*;
  * date 24/5/2018
  */
 @Entity
-@Data
 public class Department implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -23,12 +20,44 @@ public class Department implements Serializable {
 
     @Column(unique = true)
     String code;
+
     String type;
 
-    @OneToMany @JsonIgnore
+    @OneToMany
     private Set<Employee> employee;
 
     public Department() {
     }
 
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public String getCode() {
+        return code;
+    }
+
+    public void setCode(String code) {
+        this.code = code;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public Set<Employee> getEmployee() {
+        return employee;
+    }
+
+    public void setEmployee(Set<Employee> employee) {
+        this.employee = employee;
+    }
 }

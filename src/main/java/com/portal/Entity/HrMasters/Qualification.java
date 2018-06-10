@@ -11,7 +11,6 @@ import javax.persistence.*;
  * date 24/5/2018
  */
 @Entity
-@Data
 public class Qualification implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

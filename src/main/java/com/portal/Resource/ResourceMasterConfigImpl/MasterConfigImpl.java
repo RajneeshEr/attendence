@@ -62,5 +62,12 @@ public class MasterConfigImpl implements MasterConfig{
         return cityColl;
     }
 
-
+    @Override
+    public HashMap findAllCostCenterByCity(long cityId) {
+        HashMap costCenterColl=null;
+        if (listConfig.findAllCostCenterByCity(cityId)!=null){
+            costCenterColl = listConfig.findAllCostCenterByCity(cityId);
+        }
+        return costCenterColl;
+    }
 }

@@ -5,15 +5,13 @@ import com.portal.Entity.HrMasters.Department;
 import com.portal.Repository.HrMasterRepositories.DepartmentRepository;
 import com.portal.Service.HrMasterService.DepartmentService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 /**
  * @author rajneesh yadav
  * email er.rajyd@gmamil.com
  * date 24/5/2018
  */
-@Component
+@Service
 public class DepartmentServiceImpl implements CommonConstant,DepartmentService {
 
     @Autowired
@@ -26,15 +24,6 @@ public class DepartmentServiceImpl implements CommonConstant,DepartmentService {
         } catch (Exception e) {
             e.printStackTrace();
             return null;
-        }
-    }
-
-    public boolean findByIdGiven(long id){
-        try {
-            return departmentRepository.existsById(id);
-        } catch (Exception e) {
-            e.printStackTrace();
-            return false;
         }
     }
 

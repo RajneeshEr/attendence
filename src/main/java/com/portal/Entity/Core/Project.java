@@ -1,7 +1,5 @@
 package com.portal.Entity.Core;
 
-import lombok.Data;
-
 import java.io.Serializable;
 import java.util.Set;
 import javax.persistence.*;
@@ -12,7 +10,6 @@ import javax.persistence.*;
  * date 21/5/2018
  */
 @Entity
-@Data
 public class Project implements Serializable{
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -21,13 +18,59 @@ public class Project implements Serializable{
     private String name;
     private String code;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
+    //@JoinColumn(name = "businessUnit_id")
     private BusinessUnit businessUnit;
 
-   /* @OneToMany(mappedBy = "project",fetch = FetchType.LAZY)
-    private Set<Location> location;*/
+    @OneToMany(mappedBy = "project",fetch = FetchType.LAZY)
+    private Set<Location> location;
 
     public Project() {
     }
 
+    public Project(String name, String code, BusinessUnit businessUnit) {
+        this.name = name;
+        this.code = code;
+        this.businessUnit = businessUnit;
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getCode() {
+        return code;
+    }
+
+    public void setCode(String code) {
+        this.code = code;
+    }
+
+    public BusinessUnit getBusinessUnit() {
+        return businessUnit;
+    }
+
+    public void setBusinessUnit(BusinessUnit businessUnit) {
+        this.businessUnit = businessUnit;
+    }
+
+    public Set<Location> getLocation() {
+        return location;
+    }
+
+    public void setLocation(Set<Location> location) {
+        this.location = location;
+    }
 }

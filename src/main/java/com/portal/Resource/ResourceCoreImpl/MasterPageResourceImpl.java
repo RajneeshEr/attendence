@@ -19,18 +19,20 @@ public class MasterPageResourceImpl implements CommonConstant,MasterPageResource
 
     @Autowired
     private MasterPageService masterPageService;
+/*
 
     @Autowired
     private ApplicationResponse applicationResponse;
+*/
 
     //private Mapper mapper;
 
     @Override
-    public String saveMasterPage(@RequestBody MasterPageModel masterPageModel){
+    public boolean saveMasterPage(@RequestBody MasterPageModel masterPageModel){
         if (masterPageService.save(masterPageModel)!=null){
-            return SAVE;
+            return true;
         }else {
-            return NOT_SAVE;
+            return false;
         }
     }
 

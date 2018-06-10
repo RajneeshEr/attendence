@@ -1,8 +1,6 @@
 package com.portal.Service.Core;
 
-import com.portal.Entity.Core.BusinessUnit;
 import com.portal.Entity.Core.City;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 /**
  * @author rajneesh yadav
@@ -11,6 +9,7 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public interface CityService {
+    City save(City city);
     City findById(long id);
     Iterable<City> findAll();
 }

@@ -6,6 +6,7 @@ import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -16,6 +17,6 @@ import java.util.List;
 @RepositoryRestResource
 public interface CostCenterRepository extends CrudRepository<CostCenter, Long> {
     CostCenter findById(long id);
-    List<CostCenterProjection> findByCityId(long id);
+    ArrayList<CostCenterProjection> findByCityId(long id);
     List<CostCenterProjection> findAllProjectedBy();
 }

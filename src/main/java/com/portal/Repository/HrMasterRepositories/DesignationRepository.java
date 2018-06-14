@@ -5,6 +5,7 @@ import com.portal.Entity.HrMastersProjections.DesignationProjection;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
@@ -18,5 +19,5 @@ public interface DesignationRepository extends CrudRepository<Designation, Long>
     Designation findByCode(String code);
     Designation findByName(String name);
     Designation findById(long id);
-    List<DesignationProjection> findAllProjectedBy();
+    ArrayList<DesignationProjection> findAllProjectedBy();
 }

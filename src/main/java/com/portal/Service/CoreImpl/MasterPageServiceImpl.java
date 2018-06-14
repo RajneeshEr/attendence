@@ -1,13 +1,11 @@
 package com.portal.Service.CoreImpl;
 
 import com.portal.CommonConstant.CommonConstant;
-import com.portal.Entity.Core.City;
 import com.portal.Entity.Core.MasterPage;
 import com.portal.Entity.CoreModel.MasterPageModel;
 import com.portal.Repository.CoreRepository.*;
 import com.portal.Repository.HrMasterRepositories.DesignationRepository;
 import com.portal.Repository.HrMasterRepositories.EmploymentRepository;
-import com.portal.Repository.HrMasterRepositories.QualificationRepository;
 import com.portal.Service.Core.MasterPageService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -36,9 +34,6 @@ public class MasterPageServiceImpl implements CommonConstant,MasterPageService {
     private EmploymentRepository employmentRepository;
 
     @Autowired
-    private QualificationRepository qualificationRepository;
-
-    @Autowired
     private BusinessUnitRepository businessUnitRepository;
 
     @Autowired
@@ -52,11 +47,12 @@ public class MasterPageServiceImpl implements CommonConstant,MasterPageService {
         MasterPage masterPage;
         masterPage=convertModelToEntity(masterPageModel);
         try {
-            return masterPageRepository.save(masterPage);
+            masterPageRepository.save(masterPage);
         } catch (Exception e) {
             e.printStackTrace();
-            return null;
+            masterPage=null;
         }
+        return masterPage;
     }
 
     public MasterPage convertModelToEntity(MasterPageModel masterPageModel){
@@ -76,42 +72,36 @@ public class MasterPageServiceImpl implements CommonConstant,MasterPageService {
             }else { masterPage.setDesignation(null);}
         }else { masterPage.setDesignation(null);}
 
-        //master page businessUnit
-        if (busiUnitId>0) {
-            if (businessUnitRepository.existsById(busiUnitId)) {
-                masterPage.setBusinessUnit(businessUnitRepository.findById(busiUnitId));
-            } else { masterPage.setBusinessUnit(null); }
-        }else{ masterPage.setBusinessUnit(null);}
-
-        //master page project
-        if (projectId>0) {
-            if (projectRepository.existsById(projectId)) {
-                masterPage.setProject(projectRepository.findById(projectId));
-            } else { masterPage.setProject(null); }
-        }else{ masterPage.setProject(null);}
-
-        //master page location
-        if (locationId>0) {
-            if (locationRepository.existsById(locationId)) {
-                masterPage.setLocation(locationRepository.findById(locationId));
-            } else { masterPage.setLocation(null); }
-        }else{ masterPage.setLocation(null);}
-
-        //master page city
-        if (cityId>0) {
-            if (cityRepository.existsById(cityId)) {
-                masterPage.setCity(cityRepository.findById(cityId));
-            } else { masterPage.setCity(null); }
-        }else{ masterPage.setCity(null);}
-
-        //master page employment
         if (employmentId>0) {
             if (employmentRepository.existsById(employmentId)) {
                 masterPage.setEmployment(employmentRepository.findById(employmentId));
             } else { masterPage.setEmployment(null); }
         }else{ masterPage.setEmployment(null);}
 
-        //master page employment
+        if (busiUnitId>0) {
+            if (businessUnitRepository.existsById(busiUnitId)) {
+                masterPage.setBusinessUnit(businessUnitRepository.findById(busiUnitId));
+            } else { masterPage.setBusinessUnit(null); }
+        }else{ masterPage.setBusinessUnit(null);}
+
+        if (projectId>0) {
+            if (projectRepository.existsById(projectId)) {
+                masterPage.setProject(projectRepository.findById(projectId));
+            } else { masterPage.setProject(null); }
+        }else{ masterPage.setProject(null);}
+
+        if (locationId>0) {
+            if (locationRepository.existsById(locationId)) {
+                masterPage.setLocation(locationRepository.findById(locationId));
+            } else { masterPage.setLocation(null); }
+        }else{ masterPage.setLocation(null);}
+
+        if (cityId>0) {
+            if (cityRepository.existsById(cityId)) {
+                masterPage.setCity(cityRepository.findById(cityId));
+            } else { masterPage.setCity(null); }
+        }else{ masterPage.setCity(null);}
+
         if (costCenterId>0) {
             if (costCenterRepository.existsById(costCenterId)) {
                 masterPage.setCostCenter(costCenterRepository.findById(costCenterId));
@@ -131,12 +121,12 @@ public class MasterPageServiceImpl implements CommonConstant,MasterPageService {
     }
 
     public MasterPage findById(long id){
-         try {
-             return masterPageRepository.findById(id);
-         } catch (Exception e) {
-             e.printStackTrace();
-             return null;
-         }
+        try {
+            return masterPageRepository.findById(id);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
     }
 
     public Iterable<MasterPage> findAll(){

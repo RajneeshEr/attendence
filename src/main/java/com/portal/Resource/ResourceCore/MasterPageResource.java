@@ -1,5 +1,6 @@
 package com.portal.Resource.ResourceCore;
 
+import com.portal.Config.ApplicationResponse;
 import com.portal.Entity.Core.MasterPage;
 import com.portal.Entity.CoreModel.MasterPageModel;
 import org.springframework.web.bind.annotation.*;
@@ -14,11 +15,11 @@ public interface MasterPageResource {
 
     @PostMapping("/saveMasterPage")
     @CrossOrigin
-    boolean saveMasterPage(@RequestBody MasterPageModel masterPageModel);
+    ApplicationResponse saveMasterPage(@RequestBody MasterPageModel masterPageModel);
 
     @GetMapping("/findMaster/{id}")
     @CrossOrigin
-    MasterPage getMasterById(@PathVariable("id") long id);
+    ApplicationResponse getMasterById(@PathVariable("id") long id);
 
 
     @GetMapping("/findMaster/all")

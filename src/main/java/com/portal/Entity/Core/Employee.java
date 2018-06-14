@@ -33,13 +33,10 @@ public class Employee implements Serializable {
     private String passportNumber;
 
     @ManyToOne(fetch = FetchType.EAGER)
-    private Department department;
-    @ManyToOne(fetch = FetchType.EAGER)
     private Designation designation;
     @ManyToOne(fetch = FetchType.EAGER)
     private StaffType staffType;
-    @ManyToOne(fetch = FetchType.EAGER)
-    private Qualification qualification;
+
     @ManyToOne(fetch = FetchType.EAGER)
     private Employment employment;
 

@@ -23,14 +23,9 @@ public class EmployeeModel {
     private String mobileNumber;
     private String passportNumber;
 
-
-    private Department department;
-
     private Designation designation;
 
     private StaffType staffType;
-
-    private Qualification qualification;
 
     private Employment employment;
 

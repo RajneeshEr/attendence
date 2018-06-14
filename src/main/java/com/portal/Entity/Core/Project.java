@@ -18,7 +18,7 @@ public class Project implements Serializable{
     private String name;
     private String code;
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne
     //@JoinColumn(name = "businessUnit_id")
     private BusinessUnit businessUnit;
 

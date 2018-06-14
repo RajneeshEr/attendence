@@ -2,6 +2,7 @@ package com.portal.Service.MasterConfig;
 
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
 /**
@@ -12,9 +13,9 @@ import java.util.HashMap;
 @Service
 public interface ListConfigService {
     HashMap configListingOfMaster();
-    HashMap findBusinessUnit();
-    HashMap findAllProjectByBusinessUnit(long busiUnitId);
-    HashMap findAllLocationByProject(long projectId);
-    HashMap findAllCityByLocation(long locationId);
-    HashMap findAllCostCenterByCity(long cityId);
+    ArrayList findBusinessUnit();
+    ArrayList findAllProjectByBusinessUnit(long busiUnitId);
+    ArrayList findAllLocationByProject(long projectId);
+    ArrayList findAllCityByLocation(long locationId);
+    ArrayList findAllCostCenterByCity(long cityId);
 }

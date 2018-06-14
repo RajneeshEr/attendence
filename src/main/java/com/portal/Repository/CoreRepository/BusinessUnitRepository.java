@@ -5,6 +5,7 @@ import com.portal.Entity.CoreProjections.BusinessUnitProjection;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -15,5 +16,5 @@ import java.util.List;
 @RepositoryRestResource
 public interface BusinessUnitRepository extends CrudRepository<BusinessUnit, Long> {
     BusinessUnit findById(long id);
-    List<BusinessUnitProjection> findAllProjectedBy();
+    ArrayList<BusinessUnitProjection> findAllProjectedBy();
 }

@@ -9,7 +9,9 @@ import com.portal.Service.MasterConfig.ListConfigService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 /**
  * @author rajneesh yadav
@@ -44,9 +46,9 @@ public class ListConfigServiceImpl implements ListConfigService {
     public HashMap configListingOfMaster(){
         HashMap desiEmplmntcoll= new HashMap();
         try {
-            desiEmplmntcoll.put("designation",designationRepository.findAllProjectedBy());
-            desiEmplmntcoll.put("employment",employmentRepository.findAllProjectedBy());
-            desiEmplmntcoll.put("businessUnit",businessUnitRepository.findAllProjectedBy());
+            desiEmplmntcoll.put("designation",designationRepository.findAllProjectedBy().size()>0?designationRepository.findAllProjectedBy():null);
+            desiEmplmntcoll.put("employment",employmentRepository.findAllProjectedBy().size()>0?employmentRepository.findAllProjectedBy():null);
+            desiEmplmntcoll.put("businessUnit",businessUnitRepository.findAllProjectedBy().size()>0?businessUnitRepository.findAllProjectedBy():null);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -54,60 +56,80 @@ public class ListConfigServiceImpl implements ListConfigService {
     }
 
     @Override
-    public HashMap findBusinessUnit() {
-        HashMap busiUnitColl= new HashMap();
+    public ArrayList findBusinessUnit() {
+        ArrayList businessUnitList=new ArrayList();
         try {
-            busiUnitColl.put("businessUnit",businessUnitRepository.findAllProjectedBy());
+            businessUnitList=businessUnitRepository.findAllProjectedBy();
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return busiUnitColl;
+        if (businessUnitList!=null && businessUnitList.size()>0){
+            return businessUnitList;
+        }else {
+            return null;
+        }
     }
 
     @Override
-    public HashMap findAllProjectByBusinessUnit(long busiUnitId) {
-        HashMap projectColl= new HashMap();
-        BusinessUnit businessUnit=null;
-        businessUnit = businessUnitRepository.findById(busiUnitId);
+    public ArrayList findAllProjectByBusinessUnit(long busiUnitId) {
+        ArrayList projectList=new ArrayList();
         try {
-            projectColl.put("project",projectRepository.findByBusinessUnitId(busiUnitId));
+            projectList=projectRepository.findByBusinessUnitId(busiUnitId);
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return projectColl;
+        if (projectList!=null && projectList.size()>0){
+            return projectList;
+        }else {
+            return null;
+        }
     }
 
     @Override
-    public HashMap findAllLocationByProject(long projectId) {
-        HashMap locationColl= new HashMap();
+    public ArrayList findAllLocationByProject(long projectId) {
+        ArrayList locationList=new ArrayList();
         try {
-            locationColl.put("location",locationRepository.findByProjectId(projectId));
+            locationList=locationRepository.findByProjectId(projectId);
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return locationColl;
+        if (locationList!=null && locationList.size()>0){
+            return locationList;
+        }else {
+            return null;
+        }
     }
 
     @Override
-    public HashMap findAllCityByLocation(long locationId) {
-        HashMap cityColl= new HashMap();
+    public ArrayList findAllCityByLocation(long locationId) {
+        //HashMap cityColl= new HashMap();
+        ArrayList cityList=new ArrayList();
         try {
-            cityColl.put("city",cityRepository.findByLocationId(locationId)); // index 0 project with id and code
+            cityList=cityRepository.findByLocationId(locationId);
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return cityColl;
+        if (cityList!=null && cityList.size()>0){
+            return cityList;
+        }else {
+            return null;
+        }
     }
 
     @Override
-    public HashMap findAllCostCenterByCity(long cityId) {
-        HashMap cityColl= new HashMap();
+    public ArrayList findAllCostCenterByCity(long cityId) {
+        ArrayList costCenterList= new ArrayList();
         try {
-            cityColl.put("costCenter",costCenterRepository.findByCityId(cityId)); // index 0 project with id and code
+            costCenterList=costCenterRepository.findByCityId(cityId);
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return cityColl;
+        if (costCenterList!=null && costCenterList.size()>0){
+            return costCenterList;
+        }else {
+            return null;
+        }
+
     }
 
 }

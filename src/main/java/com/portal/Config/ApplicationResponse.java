@@ -1,9 +1,5 @@
 package com.portal.Config;
 
-import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
-import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Component;
 
 /**
@@ -11,17 +7,37 @@ import org.springframework.stereotype.Component;
  * email er.rajyd@gmamil.com
  * date 25/5/2018
  */
-@Data
 @Component
 public class ApplicationResponse {
 
     private String message;
-    private HttpStatus status;
-    private Object payload;
+    private boolean status;
+    //private HttpStatus status;
+    private Object data;
 
-    public ApplicationResponse setPayload(Object payload) {
-        this.payload = payload;
-        return this;
+    public String getMessage() {
+        return message;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
+    }
+
+    public boolean isStatus() {
+        return status;
+    }
+
+    public void setStatus(boolean status) {
+        this.status = status;
+    }
+
+
+    public Object getData() {
+        return data;
+    }
+
+    public void setData(Object data) {
+        this.data = data;
     }
 
     @Override
@@ -29,7 +45,7 @@ public class ApplicationResponse {
         return "ApplicationResponse{" +
                 "message='" + message + '\'' +
                 ", status=" + status +
-                ", payload=" + payload +
+                ", data=" + data+
                 '}';
     }
 

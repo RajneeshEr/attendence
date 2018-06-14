@@ -7,6 +7,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
+import java.util.ArrayList;
 import java.util.List;
 /**
  * @author rajneesh yadav
@@ -19,5 +20,5 @@ public interface ProjectRepository extends CrudRepository<Project, Long> {
     Project findById(long id);
     List<ProjectProjection> findAllProjectedBy();
     //@Query("select p from Project p where p.businessUnit_id = ?1")
-    List<ProjectProjection> findByBusinessUnitId(long businessUnit);
+    ArrayList<ProjectProjection> findByBusinessUnitId(long businessUnit);
 }

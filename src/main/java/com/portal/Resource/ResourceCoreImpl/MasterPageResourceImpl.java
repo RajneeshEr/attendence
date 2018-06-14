@@ -9,6 +9,8 @@ import com.portal.Service.Core.MasterPageService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.HashMap;
+
 /**
  * @author rajneesh yadav
  * email er.rajyd@gmamil.com
@@ -16,43 +18,48 @@ import org.springframework.web.bind.annotation.*;
  */
 @RestController
 public class MasterPageResourceImpl implements CommonConstant,MasterPageResource {
-
     @Autowired
     private MasterPageService masterPageService;
-/*
 
     @Autowired
     private ApplicationResponse applicationResponse;
-*/
 
     //private Mapper mapper;
 
     @Override
-    public boolean saveMasterPage(@RequestBody MasterPageModel masterPageModel){
-        if (masterPageService.save(masterPageModel)!=null){
-            return true;
+    public ApplicationResponse saveMasterPage(@RequestBody MasterPageModel masterPageModel){
+        //HashMap hashMap=new HashMap();
+        MasterPage masterPage=masterPageService.save(masterPageModel);
+        if (masterPage!=null){
+            applicationResponse.setStatus(true);
+            applicationResponse.setMessage(SAVE);
+           // hashMap.put("data",masterPage);
+            applicationResponse.setData(masterPage);
         }else {
-            return false;
+            applicationResponse.setStatus(false);
+            applicationResponse.setMessage(SAVE);
+            //hashMap.put("data",null);
+            applicationResponse.setData(null);
         }
+        return applicationResponse;
     }
 
-    /*@Before(value = "java")
-    public void before() throws Exception {
-        mapper = new DozerBeanMapper();
-    }*/
-
-   /* @Override
-    public String saveMasterPage(MasterPageModel masterPage) {
-        return null;
-    }*/
-
     @Override
-    public MasterPage getMasterById(@PathVariable("id") long id){
-        if (masterPageService.findById(id)!=null){
-            return masterPageService.findById(id);
+    public ApplicationResponse getMasterById(@PathVariable("id") long id){
+        //HashMap hashMap=new HashMap();
+        MasterPage masterPage=masterPageService.findById(id);
+        if (masterPage!=null){
+            applicationResponse.setStatus(true);
+            applicationResponse.setMessage(SAVE);
+            //hashMap.put("data",masterPage);
+            applicationResponse.setData(masterPage);
         }else {
-            return null;
+            applicationResponse.setStatus(false);
+            applicationResponse.setMessage(SAVE);
+            //hashMap.put("data",null);
+            applicationResponse.setData(null);
         }
+        return applicationResponse;
     }
 
     @Override

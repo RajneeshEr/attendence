@@ -57,35 +57,26 @@ public class MasterPage implements Serializable {
     }
 
     @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name="designation_id")
     private Designation designation;
 
-    //private Set<String> costCode;
-
     @ManyToOne
-    @JoinColumn(name = "businessUnit_id")
     private BusinessUnit businessUnit;
 
     @ManyToOne
-    @JoinColumn(name="employement_id")
     private Employment employment;
 
     private String qualification;
 
     @ManyToOne
-    @JoinColumn(name="project_id")
     private Project project;
 
     @ManyToOne
-    @JoinColumn(name="location_id")
     private Location location;
 
     @ManyToOne
-    @JoinColumn(name="city_id")
     private City city;
 
     @ManyToOne
-    @JoinColumn(name="costCenter_id")
     private CostCenter costCenter;
 
     private String currency;
@@ -164,6 +155,14 @@ public class MasterPage implements Serializable {
         this.designation = designation;
     }
 
+    public BusinessUnit getBusinessUnit() {
+        return businessUnit;
+    }
+
+    public void setBusinessUnit(BusinessUnit businessUnit) {
+        this.businessUnit = businessUnit;
+    }
+
     public Employment getEmployment() {
         return employment;
     }
@@ -186,6 +185,30 @@ public class MasterPage implements Serializable {
 
     public void setProject(Project project) {
         this.project = project;
+    }
+
+    public Location getLocation() {
+        return location;
+    }
+
+    public void setLocation(Location location) {
+        this.location = location;
+    }
+
+    public City getCity() {
+        return city;
+    }
+
+    public void setCity(City city) {
+        this.city = city;
+    }
+
+    public CostCenter getCostCenter() {
+        return costCenter;
+    }
+
+    public void setCostCenter(CostCenter costCenter) {
+        this.costCenter = costCenter;
     }
 
     public String getCurrency() {
@@ -378,37 +401,5 @@ public class MasterPage implements Serializable {
 
     public void setBuddyName(String buddyName) {
         this.buddyName = buddyName;
-    }
-
-    public BusinessUnit getBusinessUnit() {
-        return businessUnit;
-    }
-
-    public void setBusinessUnit(BusinessUnit businessUnit) {
-        this.businessUnit = businessUnit;
-    }
-
-    public Location getLocation() {
-        return location;
-    }
-
-    public void setLocation(Location location) {
-        this.location = location;
-    }
-
-    public City getCity() {
-        return city;
-    }
-
-    public void setCity(City city) {
-        this.city = city;
-    }
-
-    public CostCenter getCostCenter() {
-        return costCenter;
-    }
-
-    public void setCostCenter(CostCenter costCenter) {
-        this.costCenter = costCenter;
     }
 }

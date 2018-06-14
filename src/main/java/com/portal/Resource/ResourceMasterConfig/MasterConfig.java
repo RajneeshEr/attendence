@@ -1,6 +1,7 @@
 package com.portal.Resource.ResourceMasterConfig;
 
 
+import com.portal.Config.ApplicationResponse;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,25 +17,25 @@ import java.util.HashMap;
 public interface MasterConfig {
     @GetMapping(value = "/findAllConfig",produces = "application/json")
     @CrossOrigin
-    HashMap findAllConfigDetails();
+    ApplicationResponse findAllConfigDetails();
 
     @GetMapping(value = "/findAllBusinessConfig",produces = "application/json")
     @CrossOrigin
-    HashMap findBusinessUnit();
+    ApplicationResponse findBusinessUnit();
 
     @GetMapping(value = "/findAllProjectConfig",produces = "application/json")
     @CrossOrigin
-    HashMap findAllProjectByBusinessUnit(long busiUnitId);
+    ApplicationResponse findAllProjectByBusinessUnit(long busiUnitId);
 
     @GetMapping(value = "/findAllLocationConfig",produces = "application/json")
     @CrossOrigin
-    HashMap findAllLocationByProject(long projectId);
+    ApplicationResponse findAllLocationByProject(long projectId);
 
     @GetMapping(value = "/findAllCityConfig",produces = "application/json")
     @CrossOrigin
-    HashMap findAllCityByLocation(long locationId);
+    ApplicationResponse findAllCityByLocation(long locationId);
 
     @GetMapping(value = "/findAllCostCenterConfig",produces = "application/json")
     @CrossOrigin
-    HashMap findAllCostCenterByCity(long cityId);
+    ApplicationResponse findAllCostCenterByCity(long cityId);
 }

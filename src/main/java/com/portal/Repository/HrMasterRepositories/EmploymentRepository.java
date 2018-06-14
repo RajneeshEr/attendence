@@ -5,6 +5,7 @@ import com.portal.Entity.HrMastersProjections.EmploymentProjection;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -16,5 +17,5 @@ import java.util.List;
 public interface EmploymentRepository extends CrudRepository<Employment, Long> {
         Employment findByCode(String code);
         Employment findById(long id);
-        List<EmploymentProjection> findAllProjectedBy();
+        ArrayList<EmploymentProjection> findAllProjectedBy();
 }

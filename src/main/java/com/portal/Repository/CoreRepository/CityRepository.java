@@ -5,6 +5,7 @@ import com.portal.Entity.CoreProjections.CityProjection;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -15,5 +16,5 @@ import java.util.List;
 @RepositoryRestResource
 public interface CityRepository extends CrudRepository<City, Long> {
     City findById(long id);
-    List<CityProjection> findByLocationId(long locId);
+    ArrayList<CityProjection> findByLocationId(long locId);
 }

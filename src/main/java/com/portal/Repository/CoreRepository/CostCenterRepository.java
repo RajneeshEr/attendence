@@ -18,5 +18,5 @@ import java.util.List;
 public interface CostCenterRepository extends CrudRepository<CostCenter, Long> {
     CostCenter findById(long id);
     ArrayList<CostCenterProjection> findByCityId(long id);
-    List<CostCenterProjection> findAllProjectedBy();
+    ArrayList<CostCenterProjection> findAllProjectedBy();
 }

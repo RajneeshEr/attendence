@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public interface CostCenterService {
+    CostCenter save(CostCenter costCenter);
     CostCenter findById(long id);
     Iterable<CostCenter> findAll();
 }

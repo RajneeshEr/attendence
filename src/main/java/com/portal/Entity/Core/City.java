@@ -1,10 +1,6 @@
 package com.portal.Entity.Core;
 
 import java.io.Serializable;
-import java.util.Set;
-
-import lombok.Data;
-
 import javax.persistence.*;
 
 /**
@@ -23,9 +19,6 @@ public class City implements Serializable {
 
     @ManyToOne(fetch = FetchType.EAGER)
     private Location location;
-
-    @OneToMany
-    private Set<CostCenter> costCenters;
 
     public City() {
     }
@@ -62,11 +55,4 @@ public class City implements Serializable {
         this.location = location;
     }
 
-    public Set<CostCenter> getCostCenters() {
-        return costCenters;
-    }
-
-    public void setCostCenters(Set<CostCenter> costCenters) {
-        this.costCenters = costCenters;
-    }
 }

@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public interface BusinessUnitService {
-    //BusinessUnit save(EntityModel entityModel);
+    BusinessUnit save(BusinessUnit businessUnit);
     BusinessUnit findById(long id);
     Iterable<BusinessUnit> findAll();
 

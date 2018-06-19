@@ -14,7 +14,7 @@ import java.util.List;
  */
 @RepositoryRestResource
 public interface LocationRepository extends CrudRepository<Location, Long> {
-    List<Location> findByName(String name);
+    ArrayList<Location> findByName(String name);
     Location findById(long id);
     ArrayList<LocationProjection> findByProjectId(long projctId);
 }

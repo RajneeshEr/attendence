@@ -44,13 +44,12 @@ public class MasterPageServiceImpl implements CommonConstant,MasterPageService {
 
     //this method will work for save or update object
     public MasterPage save(MasterPageModel masterPageModel){
-        MasterPage masterPage;
+        MasterPage masterPage=null;
         masterPage=convertModelToEntity(masterPageModel);
         try {
-            masterPageRepository.save(masterPage);
+            masterPage=masterPageRepository.save(masterPage);
         } catch (Exception e) {
             e.printStackTrace();
-            masterPage=null;
         }
         return masterPage;
     }

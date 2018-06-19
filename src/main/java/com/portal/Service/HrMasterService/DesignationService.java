@@ -10,13 +10,9 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public interface DesignationService {
-
     Designation findById(long id);
-
-    // this method will work for save or update object
-    Designation saveDesignation(Designation designation);
-    Designation getDesignationByName(String name);
-    Designation getDesignationByCode(String code);
+    Designation save(Designation designation);
+    Designation findByName(String name);
+    Designation findByCode(String code);
     String delete(Designation designation);
-
 }

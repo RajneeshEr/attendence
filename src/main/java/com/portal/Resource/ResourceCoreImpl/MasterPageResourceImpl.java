@@ -37,7 +37,7 @@ public class MasterPageResourceImpl implements CommonConstant,MasterPageResource
             applicationResponse.setData(masterPage);
         }else {
             applicationResponse.setStatus(false);
-            applicationResponse.setMessage(SAVE);
+            applicationResponse.setMessage(NOT_SAVE);
             //hashMap.put("data",null);
             applicationResponse.setData(null);
         }

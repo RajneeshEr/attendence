@@ -2,9 +2,9 @@ package com.portal.Resource.ResourceCoreImpl;
 
 import com.portal.CommonConstant.CommonConstant;
 import com.portal.Config.ApplicationResponse;
-import com.portal.Entity.Core.City;
-import com.portal.Resource.ResourceCore.CityResource;
-import com.portal.Service.Core.CityService;
+import com.portal.Entity.Core.CostCenter;
+import com.portal.Resource.ResourceCore.CostCenterResource;
+import com.portal.Service.Core.CostCenterService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -12,21 +12,22 @@ import org.springframework.web.bind.annotation.RestController;
 /**
  * @author rajneesh yadav
  * email er.rajyd@gmamil.com
- * date 06/6/2018
+ * date 19/6/2018
  */
 @RestController
-public class CityResourceImpl implements CityResource,CommonConstant {
+public class CostCenterResourceImpl implements CostCenterResource,CommonConstant{
+
     @Autowired
-    private CityService cityService;
+    private CostCenterService costCenterService;
 
     @Override
-    public ApplicationResponse saveCity(@RequestBody City city) {
+    public ApplicationResponse saveCostCenter(@RequestBody CostCenter costCenter) {
         ApplicationResponse applicationResponse = new ApplicationResponse();
-        City city1 =cityService.save(city);
-        if (city1!=null){
+        CostCenter costCenter1=costCenterService.save(costCenter);
+        if (costCenter1!=null){
             applicationResponse.setStatus(true);
             applicationResponse.setMessage(SAVE);
-            applicationResponse.setData(city1);
+            applicationResponse.setData(costCenter1);
         }else {
             applicationResponse.setStatus(false);
             applicationResponse.setMessage(NOT_SAVE);

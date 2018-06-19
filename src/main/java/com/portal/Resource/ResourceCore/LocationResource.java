@@ -1,9 +1,7 @@
 package com.portal.Resource.ResourceCore;
 
 import com.portal.Config.ApplicationResponse;
-import com.portal.Entity.Core.City;
-import com.portal.Entity.CoreModel.CityModel;
-import com.portal.Entity.CoreModel.MasterPageModel;
+import com.portal.Entity.Core.Location;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -12,12 +10,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 /**
  * @author rajneesh yadav
  * email er.rajyd@gmamil.com
- * date 06/6/2018
+ * date 18/6/2018
  */
-@RequestMapping("/rest/city")
-public interface CityResource {
+@RequestMapping("/rest/location")
+public interface LocationResource {
 
-    @PostMapping("/saveCity")
+    @PostMapping("/saveLocation")
     @CrossOrigin
-    ApplicationResponse saveCity(@RequestBody City city);
+    ApplicationResponse saveLocation(@RequestBody Location location);
 }

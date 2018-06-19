@@ -17,10 +17,16 @@ public class BusinessUnitServiceImpl implements BusinessUnitService{
     @Autowired
     private BusinessUnitRepository businessUnitRepository;
 
-    /*@Override
-    public BusinessUnit save(EntityModel entityModel) {
-        return null;
-    }*/
+    @Override
+    public BusinessUnit save(BusinessUnit businessUnit) {
+        BusinessUnit businessUnit1=null;
+        try {
+            businessUnit1=businessUnitRepository.save(businessUnit);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return businessUnit1;
+    }
 
     @Override
     public BusinessUnit findById(long id) {

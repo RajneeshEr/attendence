@@ -1,5 +1,7 @@
 package com.portal.Entity.Core;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import java.io.Serializable;
 import java.util.Set;
 
@@ -15,20 +17,13 @@ public class BusinessUnit implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     long id;
-
     private String code;
     private String name;
-
-    @OneToMany(mappedBy = "businessUnit",cascade = CascadeType.ALL)
-    private Set<Project> project;
+    /*@OneToMany
+    *//*@JsonIgnore*//*
+    private Set<Project> project;*/
 
     public BusinessUnit() {
-    }
-
-    public BusinessUnit(String code, String name, Set<Project> project) {
-        this.code = code;
-        this.name = name;
-        this.project = project;
     }
 
     public long getId() {
@@ -54,12 +49,12 @@ public class BusinessUnit implements Serializable {
     public void setName(String name) {
         this.name = name;
     }
+/*
     public Set<Project> getProject() {
         return project;
     }
 
     public void setProject(Set<Project> project) {
         this.project = project;
-    }
-
+    }*/
 }

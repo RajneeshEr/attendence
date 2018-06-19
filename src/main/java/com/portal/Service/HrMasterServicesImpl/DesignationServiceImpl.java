@@ -19,6 +19,15 @@ public class DesignationServiceImpl implements CommonConstant,DesignationService
     @Autowired
     private DesignationRepository designationRepository;
 
+    public Designation save(Designation designation){
+        try{
+            return designationRepository.save(designation);
+        }catch (Exception e ){
+            e.printStackTrace();
+            return null;
+        }
+    }
+
     public Designation findById(long id){
         try{
             return null;
@@ -28,17 +37,7 @@ public class DesignationServiceImpl implements CommonConstant,DesignationService
         }
     }
 
-    // this method will work for save or update object
-    public Designation saveDesignation(Designation designation){
-        try{
-            return designationRepository.save(designation);
-        }catch (Exception e ){
-            e.printStackTrace();
-            return null;
-        }
-    }
-
-    public Designation getDesignationByName(String name){
+    public Designation findByName(String name){
         try{
             return designationRepository.findByName(name);
         }catch (Exception e){
@@ -47,7 +46,7 @@ public class DesignationServiceImpl implements CommonConstant,DesignationService
         }
     }
 
-    public Designation getDesignationByCode(String code){
+    public Designation findByCode(String code){
         try{
             return designationRepository.findByName(code);
         }catch (Exception e){

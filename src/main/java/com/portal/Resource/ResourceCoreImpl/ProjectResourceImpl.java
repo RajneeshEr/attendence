@@ -1,6 +1,7 @@
 package com.portal.Resource.ResourceCoreImpl;
 
 import com.portal.CommonConstant.CommonConstant;
+import com.portal.Config.ApplicationResponse;
 import com.portal.Entity.Core.Project;
 import com.portal.Resource.ResourceCore.ProjectResource;
 import com.portal.Service.Core.ProjectService;
@@ -16,21 +17,29 @@ import org.springframework.web.bind.annotation.*;
 public class ProjectResourceImpl implements CommonConstant,ProjectResource {
 
     @Autowired
-    private ProjectService teamService;
+    private ProjectService projectService;
 
     @Override
-    public String save(@RequestBody Project project){
-        if (teamService.save(project) !=null){
-            return SAVE;
+    public ApplicationResponse save(@RequestBody Project project){
+        ApplicationResponse applicationResponse = new ApplicationResponse();
+        Project project1 =projectService.save(project);
+
+        if (project1!=null){
+            applicationResponse.setStatus(true);
+            applicationResponse.setMessage(SAVE);
+            applicationResponse.setData(project1);
         }else{
-            return NOT_SAVE;
+            applicationResponse.setStatus(false);
+            applicationResponse.setMessage(NOT_SAVE);
+            applicationResponse.setData(null);
         }
+
+        return applicationResponse ;
     }
 
     @Override
     public Project getTeamByid(@PathVariable("id") long id){
-        return teamService.findById(id);
+        return projectService.findById(id);
     }
-
 
 }

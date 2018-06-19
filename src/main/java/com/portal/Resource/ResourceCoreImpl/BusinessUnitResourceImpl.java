@@ -2,9 +2,9 @@ package com.portal.Resource.ResourceCoreImpl;
 
 import com.portal.CommonConstant.CommonConstant;
 import com.portal.Config.ApplicationResponse;
-import com.portal.Entity.Core.City;
-import com.portal.Resource.ResourceCore.CityResource;
-import com.portal.Service.Core.CityService;
+import com.portal.Entity.Core.BusinessUnit;
+import com.portal.Resource.ResourceCore.BusinessUnitResource;
+import com.portal.Service.Core.BusinessUnitService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -12,26 +12,39 @@ import org.springframework.web.bind.annotation.RestController;
 /**
  * @author rajneesh yadav
  * email er.rajyd@gmamil.com
- * date 06/6/2018
+ * date 15/6/2018
  */
 @RestController
-public class CityResourceImpl implements CityResource,CommonConstant {
+public class BusinessUnitResourceImpl implements BusinessUnitResource,CommonConstant {
+
     @Autowired
-    private CityService cityService;
+    private BusinessUnitService businessUnitService;
 
     @Override
-    public ApplicationResponse saveCity(@RequestBody City city) {
+    public ApplicationResponse saveBusinessUnit(@RequestBody BusinessUnit businessUnit) {
         ApplicationResponse applicationResponse = new ApplicationResponse();
-        City city1 =cityService.save(city);
-        if (city1!=null){
+        BusinessUnit businessUnit1=businessUnitService.save(businessUnit);
+        if (businessUnit1!=null){
             applicationResponse.setStatus(true);
             applicationResponse.setMessage(SAVE);
-            applicationResponse.setData(city1);
+            applicationResponse.setData(businessUnit1);
         }else {
             applicationResponse.setStatus(false);
             applicationResponse.setMessage(NOT_SAVE);
             applicationResponse.setData(null);
         }
         return applicationResponse ;
+    }
+
+    @Override
+    public ApplicationResponse deleteBusinessUnitById(long id) {
+        //todo
+        return null;
+    }
+
+    @Override
+    public ApplicationResponse deleteAllBusinessUnit(long id) {
+        //todo
+        return null;
     }
 }

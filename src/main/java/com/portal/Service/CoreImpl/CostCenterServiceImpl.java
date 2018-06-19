@@ -18,6 +18,16 @@ public class CostCenterServiceImpl implements CostCenterService {
     private CostCenterRepository costCenterRepository;
 
     @Override
+    public CostCenter save(CostCenter costCenter){
+        try {
+            return costCenterRepository.save(costCenter);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    @Override
     public CostCenter findById(long id) {
         try {
             return costCenterRepository.findById(id);

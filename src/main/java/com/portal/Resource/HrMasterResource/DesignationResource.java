@@ -1,6 +1,8 @@
 package com.portal.Resource.HrMasterResource;
 
+import com.portal.Config.ApplicationResponse;
 import com.portal.Entity.Core.MasterPage;
+import com.portal.Entity.HrMasters.Designation;
 import org.springframework.web.bind.annotation.*;
 
 /**
@@ -11,7 +13,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/rest/designation")
 public interface DesignationResource {
 
-    @PostMapping("/saveMasterPage")
-    String saveMasterPage(@RequestBody MasterPage masterPage);
+    @PostMapping("/save")
+    ApplicationResponse save(@RequestBody Designation designation);
 
 }

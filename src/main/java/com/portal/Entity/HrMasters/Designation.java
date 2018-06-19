@@ -1,11 +1,6 @@
 package com.portal.Entity.HrMasters;
 
-import com.portal.Entity.Core.Employee;
-import lombok.Data;
-
 import java.io.Serializable;
-import java.util.Set;
-
 import javax.persistence.*;
 
 /**
@@ -20,18 +15,11 @@ public class Designation implements Serializable {
     long id;
 
     @Column(unique = true)
-    private String code; // mandatory field
-
-    private String name; // mandatory field
-
-    @OneToOne
-    @JoinColumn(name = "StaffType_id")
-    private StaffType staffType;
-
+    private String code;
+    private String name;
     private String bandLevel;
-
-    @OneToMany
-    private Set<Employee> employee;
+    @OneToOne
+    private StaffType staffType;
 
     public Designation() {
     }
@@ -60,14 +48,6 @@ public class Designation implements Serializable {
         this.name = name;
     }
 
-    public StaffType getStaffType() {
-        return staffType;
-    }
-
-    public void setStaffType(StaffType staffType) {
-        this.staffType = staffType;
-    }
-
     public String getBandLevel() {
         return bandLevel;
     }
@@ -76,11 +56,11 @@ public class Designation implements Serializable {
         this.bandLevel = bandLevel;
     }
 
-    public Set<Employee> getEmployee() {
-        return employee;
+    public StaffType getStaffType() {
+        return staffType;
     }
 
-    public void setEmployee(Set<Employee> employee) {
-        this.employee = employee;
+    public void setStaffType(StaffType staffType) {
+        this.staffType = staffType;
     }
 }

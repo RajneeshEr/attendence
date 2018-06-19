@@ -1,5 +1,6 @@
 package com.portal.Entity.Core;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -27,11 +28,11 @@ public class Location implements Serializable {
     @ManyToOne(fetch = FetchType.EAGER)
     private Project project;
 
+/*
     @OneToMany(fetch = FetchType.EAGER)
+    @JsonIgnore
     private Set<City> cities;
-
-    @OneToMany
-    private Set<MasterPage> masterPage;
+*/
 
     public Location() {
     }
@@ -68,6 +69,7 @@ public class Location implements Serializable {
         this.project = project;
     }
 
+/*
     public Set<City> getCities() {
         return cities;
     }
@@ -75,4 +77,5 @@ public class Location implements Serializable {
     public void setCities(Set<City> cities) {
         this.cities = cities;
     }
+*/
 }

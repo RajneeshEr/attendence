@@ -1,7 +1,7 @@
 package com.portal.Entity.Core;
 
+
 import java.io.Serializable;
-import java.util.Set;
 import javax.persistence.*;
 
 /**
@@ -19,19 +19,13 @@ public class Project implements Serializable{
     private String code;
 
     @ManyToOne
-    //@JoinColumn(name = "businessUnit_id")
     private BusinessUnit businessUnit;
 
-    @OneToMany(mappedBy = "project",fetch = FetchType.LAZY)
+   /* @OneToMany(fetch = FetchType.EAGER)
+    @JsonIgnore
     private Set<Location> location;
-
+*/
     public Project() {
-    }
-
-    public Project(String name, String code, BusinessUnit businessUnit) {
-        this.name = name;
-        this.code = code;
-        this.businessUnit = businessUnit;
     }
 
     public long getId() {
@@ -66,6 +60,7 @@ public class Project implements Serializable{
         this.businessUnit = businessUnit;
     }
 
+    /*
     public Set<Location> getLocation() {
         return location;
     }
@@ -73,4 +68,6 @@ public class Project implements Serializable{
     public void setLocation(Set<Location> location) {
         this.location = location;
     }
+*/
+
 }

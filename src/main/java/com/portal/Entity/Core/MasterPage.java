@@ -25,8 +25,8 @@ public class MasterPage implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     long id;
 
-    @Column(unique = true) @JsonIgnore
-    private long mrfNumber;
+    @JsonIgnore
+    private int mrfNumber;   // need to implement unique mrf number
 
     public MasterPage(MasterPageModel masterPageModel){
         this.qualification=masterPageModel.getQualification();
@@ -139,11 +139,11 @@ public class MasterPage implements Serializable {
         this.id = id;
     }
 
-    public long getMrfNumber() {
+    public int getMrfNumber() {
         return mrfNumber;
     }
 
-    public void setMrfNumber(long mrfNumber) {
+    public void setMrfNumber(int mrfNumber) {
         this.mrfNumber = mrfNumber;
     }
 

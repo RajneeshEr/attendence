@@ -5,7 +5,6 @@ import com.portal.Entity.HrMasters.Employment;
 import com.portal.Repository.HrMasterRepositories.EmploymentRepository;
 import com.portal.Service.HrMasterService.EmploymentService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 /**
@@ -65,9 +64,4 @@ public class EmploymentServiceImpl implements CommonConstant,EmploymentService {
             return NOT_DELETE;
         }
     }
-
-
-
-
-
 }

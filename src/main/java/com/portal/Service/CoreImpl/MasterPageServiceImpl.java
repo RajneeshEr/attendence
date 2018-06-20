@@ -42,7 +42,6 @@ public class MasterPageServiceImpl implements CommonConstant,MasterPageService {
     @Autowired
     private CostCenterRepository costCenterRepository;
 
-    //this method will work for save or update object
     public MasterPage save(MasterPageModel masterPageModel){
         MasterPage masterPage=null;
         masterPage=convertModelToEntity(masterPageModel);
@@ -133,7 +132,6 @@ public class MasterPageServiceImpl implements CommonConstant,MasterPageService {
         try {
             masterPages=masterPageRepository.findAll();
         } catch (Exception e) {
-            masterPages=null;
             e.printStackTrace();
         }
         return masterPages;

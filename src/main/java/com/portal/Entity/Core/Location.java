@@ -1,12 +1,6 @@
 package com.portal.Entity.Core;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import lombok.Getter;
-import lombok.Setter;
-
 import java.io.Serializable;
-import java.util.Set;
-
 import javax.persistence.*;
 
 /**
@@ -15,8 +9,6 @@ import javax.persistence.*;
  * date 21/5/2018
  */
 @Entity
-@Getter
-@Setter
 public class Location implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -24,7 +16,6 @@ public class Location implements Serializable {
 
     private String code;
     private String name;
-
     @ManyToOne(fetch = FetchType.EAGER)
     private Project project;
 

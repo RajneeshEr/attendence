@@ -24,6 +24,10 @@ public interface BusinessUnitResource {
     @CrossOrigin
     ApplicationResponse saveBusinessUnit(@RequestBody BusinessUnit businessUnit);
 
+    @PostMapping("/findAllBusinessUnit")
+    @CrossOrigin
+    ApplicationResponse findAllBusinessUnit();
+
     @DeleteMapping("/deleteBusinessUnit")
     @CrossOrigin
     ApplicationResponse deleteBusinessUnitById(long id);

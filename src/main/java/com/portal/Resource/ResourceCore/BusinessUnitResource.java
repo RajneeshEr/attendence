@@ -24,7 +24,7 @@ public interface BusinessUnitResource {
     @CrossOrigin
     ApplicationResponse saveBusinessUnit(@RequestBody BusinessUnit businessUnit);
 
-    @PostMapping("/findAllBusinessUnit")
+    @GetMapping("/findAllBusinessUnit")
     @CrossOrigin
     ApplicationResponse findAllBusinessUnit();
 

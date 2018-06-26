@@ -49,7 +49,6 @@ public class BusinessUnitServiceImpl implements BusinessUnitService{
         try {
             businessUnits=businessUnitRepository.findAll();
         } catch (Exception e) {
-            businessUnits=null;
             e.printStackTrace();
         }
         return businessUnits;

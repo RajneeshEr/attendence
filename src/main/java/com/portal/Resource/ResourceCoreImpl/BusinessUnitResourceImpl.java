@@ -41,14 +41,14 @@ public class BusinessUnitResourceImpl implements BusinessUnitResource,CommonCons
     @Override
     public ApplicationResponse findAllBusinessUnit() {
         ApplicationResponse applicationResponse = new ApplicationResponse();
-        ArrayList businessList= (ArrayList) businessUnitService.findAll();
+        ArrayList<BusinessUnit> businessList= (ArrayList) businessUnitService.findAll();
         if (businessList.size()>0 && businessList!=null){
             applicationResponse.setStatus(true);
-            applicationResponse.setMessage(SAVE);
+            applicationResponse.setMessage(FIND);
             applicationResponse.setData(businessList);
         }else {
             applicationResponse.setStatus(false);
-            applicationResponse.setMessage(NOT_SAVE);
+            applicationResponse.setMessage(NOT_FIND);
             applicationResponse.setData(null);
         }
         return applicationResponse ;
